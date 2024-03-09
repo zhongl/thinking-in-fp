@@ -400,7 +400,7 @@ $$
 
 > Composition $(\circ)$, $\text{Insert}\ (/)$, and $\text{ApplyToAll}\ (\alpha)$ are functional forms that combine existing functions to form new ones. Thus $f \circ g$ is the function obtained by applying first $g$ and then $f$, and $\alpha f$ is the function obtained by applying $f$ to every member of the argument. If we write $f:x$ for the result of applying $f$ to the object $x$, then we can explain each step in evaluating Innerproduct applied to the pair of vectors $<<1, 2, 3>, <6, 5, 4>>$ as follows: 
 
-复合 $(\circ)$，$\text{Insert}\ (/)$ 和 $\text{ApplyToAll}\ (\alpha)$ 都是函数的形式，而函数又可以被组合为新的函数。因而有，$f\circ g$ 代表先应用函数$g$，后应用函数 $f$。$\alpha f$ 代表函数 $f$ 应用于参数的每个元素。当出现 $f:x$ 则代表对象 $x$ 应用了函数 $f$ 的结果。现在，我们可以逐步解释 $\text{Innerproduct}$ 应用于一对向量 $<<1, 2, 3>, <6, 5, 4>>$ 计算过程，如下：
+复合 $(\circ)$， $\text{Insert}\ (/)$ 和 $\text{ApplyToAll}\ (\alpha)$ 都是函数的形式，而函数又可以被组合为新的函数。因而有， $f\circ g$ 代表先应用函数 $g$，后应用函数 $f$ 。 $\alpha f$ 代表函数 $f$ 应用于参数的每个元素。当出现 $f:x$ 则代表对象 $x$ 应用了函数 $f$ 的结果。现在，我们可以逐步解释 $\text{Innerproduct}$ 应用于一对向量 $<<1, 2, 3>, <6, 5, 4>>$ 计算过程，如下：
 
 $$
 \begin{aligned}
@@ -429,8 +429,8 @@ $$
 > 7. It employs housekeeping forms and functions that are generally useful in many other programs; in fact, only $+$ and $\times$ are not concerned with housekeeping. These forms and functions can combine with others to create higher level housekeeping operators. 
 
 1. 它只作用于它的参数，没有隐藏状态或复杂转换规则。它只有两种规则，一种是函数应用其参数，另一种是函数可以由其形式获得，如，复合形式 $f \circ g$，或全体应用形式 $\alpha f$，一旦给定 $f$ 和 $g$ 作为其参数形式，即能获得新的函数。
-2. 它是分层构建的，三个较小的函数（$+$、$\times$、$\text{Trans}$），加上三个函数形式 $f \circ g$、$\alpha f$、$/f$。
-3. 它是静态且非重复的，意味着其结构易于理解，而无需在脑中推演。比如，只要能够理解 $\alpha f$（全体应用）和 $f \circ g$（复合）形式的作用，便能理解 $\alpha \times$（全体应用乘法）和 $(\alpha \times) \circ \text{Trans}$（交替后全体应用乘法）的作用，以此类推。
+2. 它是分层构建的，三个较小的函数（ $+$、 $\times$ 、 $\text{Trans}$ ），加上三个函数形式 $f \circ g$ 、 $\alpha f$ 、 $/f$。
+3. 它是静态且非重复的，意味着其结构易于理解，而无需在脑中推演。比如，只要能够理解 $\alpha f$（全体应用）和 $f \circ g$（复合）形式的作用，便能理解 $\alpha \times$ （全体应用乘法）和 $(\alpha \times) \circ \text{Trans}$ （交替后全体应用乘法）的作用，以此类推。
 4. 它操作在完整的概念单元上，而不是字。一共三步，却无一步是重复。
 5. 它没有牵扯任何数据，是完全通用的。它可以用于任何一致成对的向量。
 6. 它没有命名任何参数，因此可应用于任何成对向量，而无需任何过程声明，或是遵循复杂的替换规则。
