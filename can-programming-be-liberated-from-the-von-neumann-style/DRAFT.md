@@ -170,34 +170,34 @@ origin: https://dl.acm.org/doi/epdf/10.1145/359576.359579
 #### 2.2.1 简单的操作模型
 
 > Examples
- ~ Turing machines, various automata.
+> :	Turing machines, various automata.
 
 例如
- ~ 图灵机，各种自动机。
+:	图灵机，各种自动机。
  
 > Foundations
- ~ concise and useful.
+> :	concise and useful.
 
 基础
- ~ 简洁而有用。
+:	简洁而有用。
 
 > History sensitivity
- ~ have storage, are history sensitive.
+> :	have storage, are history sensitive.
 
 前序敏感性
- ~ 拥有存储，前序敏感。
+:	拥有存储，前序敏感。
 
 > Semantics
- ~ state transition with very simple states.
+> :	state transition with very simple states.
 
 语义
- ~ 在极简状态间变换。
+:	在极简状态间变换。
 
 > Program clarity
- ~ programs unclear and conceptually not helpful.
+> :	programs unclear and conceptually not helpful.
 
 程序清晰度
- ~ 程序不清晰，在概念上没有用。
+:	程序不清晰，在概念上没有用。
 
 
 > 2.2.2 Applicative models 
@@ -205,34 +205,34 @@ origin: https://dl.acm.org/doi/epdf/10.1145/359576.359579
 #### 2.2.2 应用型模型
 
 > Examples
- ~ Church's lambda calculus[^5], Curry's system of combinators[^6], pure Lisp[^17], functional programming systems described in this paper.
+> :	Church's lambda calculus[^5], Curry's system of combinators[^6], pure Lisp[^17], functional programming systems described in this paper.
 
 例如
- ~ 邱奇的Lambda演算[^5]，Curry的组合系统[^6]，纯LISP[^17]，本文提到的函数式编程系统。
+:	邱奇的Lambda演算[^5]，Curry的组合系统[^6]，纯LISP[^17]，本文提到的函数式编程系统。
 
 > Foundations
- ~ concise and useful.
+> :	concise and useful.
 
 基础
- ~ 简洁而有用。
+:	简洁而有用。
 
 > History sensitivity
- ~ no storage, not history sensitive.
+> :	no storage, not history sensitive.
 
 前序敏感性
- ~ 没有存储，前序不敏感。
+:	没有存储，前序不敏感。
 
 > Semantics
- ~ reduction semantics, no states.
+> :	reduction semantics, no states.
 
 语义
- ~ 归约语义，无状态。
+:	归约语义，无状态。
 
 > Program clarity
- ~ programs can be clear and conceptually useful.
+> :	programs can be clear and conceptually useful.
 
 程序清晰度
- ~ 程序可清晰，在概念上有用。
+:	程序可清晰，在概念上有用。
 
 [^5]: TODO 
 [^6]: TODO 
@@ -243,34 +243,34 @@ origin: https://dl.acm.org/doi/epdf/10.1145/359576.359579
 #### 2.2.3 冯·诺伊曼模型 
 
 > Examples
- ~ von Neumann computers, conventional programming languages.
+> :	von Neumann computers, conventional programming languages.
 
 例如
- ~ 冯·诺伊曼计算机，传统编程语言。
+:	冯·诺伊曼计算机，传统编程语言。
 
 > Foundations
- ~ complex, bulky, not useful.
+> :	complex, bulky, not useful.
 
 基础
- ~ 复杂，笨重，无用。
+:	复杂，笨重，无用。
 
 > History sensitivity
- ~ have storage, are history sensitive.
+> :	have storage, are history sensitive.
 
 前序敏感性
- ~ 拥有存储，前序敏感。
+:	拥有存储，前序敏感。
 
 > Semantics
- ~ state transition with complex states.
+> :	state transition with complex states.
 
 语义
- ~ 复杂状态间变换。
+:	复杂状态间变换。
 
 > Program clarity
- ~ programs can be moderately clear, are not very useful conceptually.
+> :	programs can be moderately clear, are not very useful conceptually.
 
 程序清晰度
- ~ 程序可以适度清晰，在概念上不是很有用。
+:	程序可以适度清晰，在概念上不是很有用。
 
 
 > The above classification is admittedly crude and debatable. Some recent models may not fit easily into any of these categories. For example, the data-flow languages developed by Arvind and Gostelow [^1], Dennis [^7], Kosinski [^13], and others partly fit the class of simple operational models, but their programs are clearer than those of earlier models in the class and it is perhaps possible to argue that some have reduction semantics. In any event, this classification will serve as a crude map of the territory to be discussed. We shall be concerned only with applicative and von Neumann models. 
@@ -401,21 +401,21 @@ $$
 \text{Def IP} \equiv (/ +) \circ (\alpha \times) \circ Trans.
 $$
 
-> Composition $(\circ)$, $\text{Insert}\ (/)$, and $\text{ApplyToAll}\ (\alpha)$ are functional forms that combine existing functions to form new ones. Thus $f \circ g$ is the function obtained by applying first $g$ and then $f$, and $\alpha f$ is the function obtained by applying $f$ to every member of the argument. If we write $f:x$ for the result of applying $f$ to the object $x$, then we can explain each step in evaluating Innerproduct applied to the pair of vectors $<<1, 2, 3>, <6, 5, 4>>$ as follows: 
+> Composition $(\circ)$, $\text{Insert}\ (/)$, and $\text{ApplyToAll}\ (\alpha)$ are functional forms that combine existing functions to form new ones. Thus $f \circ g$ is the function obtained by applying first $g$ and then $f$, and $\alpha f$ is the function obtained by applying $f$ to every member of the argument. If we write $f:x$ for the result of applying $f$ to the object $x$, then we can explain each step in evaluating Innerproduct applied to the pair of vectors $<<\textit{1, 2, 3}>, <\textit{6, 5, 4}>>$ as follows: 
 
-复合 $(\circ)$， $\text{Insert}\ (/)$ 和 $\text{ApplyToAll}\ (\alpha)$ 都是函数的形式，而函数又可以被组合为新的函数。因而有， $f\circ g$ 代表先应用函数 $g$，后应用函数 $f$ 。 $\alpha f$ 代表函数 $f$ 应用于参数的每个元素。当出现 $f:x$ 则代表对象 $x$ 应用了函数 $f$ 的结果。现在，我们可以逐步解释 $\text{Innerproduct}$ 应用于一对向量 $<<1, 2, 3>, <6, 5, 4>>$ 计算过程，如下：
+复合 $(\circ)$， $\text{Insert}\ (/)$ 和 $\text{ApplyToAll}\ (\alpha)$ 都是函数的形式，而函数又可以被组合为新的函数。因而有， $f\circ g$ 代表先应用函数 $g$，后应用函数 $f$ 。 $\alpha f$ 代表函数 $f$ 应用于参数的每个元素。当出现 $f:x$ 则代表对象 $x$ 应用了函数 $f$ 的结果。现在，我们可以逐步解释 $\text{Innerproduct}$ 应用于一对向量 $<<\textit{1, 2, 3}>, <\textit{6, 5, 4}>>$ 计算过程，如下：
 
 $$
 \begin{aligned}
-    &\text{IP}:\ <<1,2,3>,<6,5,4>> && = \\
-    &\text{Definition of IP} && \implies (/ +) \circ (\alpha \times) \circ \text{Trans}:\ <<1,2,3>,<6,5,4>>\\
-    &\text{Effect of composition}, \circ && \implies (/ +) : ((\alpha \times) : (\text{Trans}:\ <<1,2,3>,<6,5,4>>))\\
-    &\text{Applying Transpose} && \implies (/ +) : ((\alpha \times) :\ <<1,6>,<2,5>,<3,4>>)\\
-    &\text{Effect of ApplyToAll},\alpha && \implies (/+):\ <\times:\ <1,6>, \times:\ <2,5>, \times:\ <3,4>>\\
-    &\text{Applying}\ \times && \implies (/+):\ <6,10,12>\\
-    &\text{Effect of Insert},/ && \implies +:\ <6,+:\ <10,12>>\\
-    &\text{Applying}\ + && \implies +:\ <6,22>\\
-    &\text{Applying}\ + \text{again} && \implies 28
+    &\text{IP}: <<\textit{1,2,3}>,<\textit{6,5,4}>> && = \\
+    &\text{Definition of IP} && \implies (/ +) \circ (\alpha \times) \circ \text{Trans}: <<\textit{1,2,3}>,<\textit{6,5,4}>>\\
+    &\text{Effect of composition}, \circ && \implies (/ +) : ((\alpha \times) : (\text{Trans}: <<\textit{1,2,3}>,<\textit{6,5,4}>>))\\
+    &\text{Applying Transpose} && \implies (/ +) : ((\alpha \times) : <<\textit{1,6}>,<\textit{2,5}>,<\textit{3,4}>>)\\
+    &\text{Effect of ApplyToAll},\alpha && \implies (/+): <\times: <\textit{1,6}>, \times: <\textit{2,5}>, \times: <\textit{3,4}>>\\
+    &\text{Applying}\ \times && \implies (/+): <\textit{6,10,12}>\\
+    &\text{Effect of Insert},/ && \implies +: <\textit{6},+: <\textit{10,12}>>\\
+    &\text{Applying}\ + && \implies +: <\textit{6,22}>\\
+    &\text{Applying}\ + \text{again} && \implies \textit{28}
 \end{aligned}
 $$
 
@@ -518,7 +518,7 @@ $$
 
 > Denotational semantics [^23] and its foundations [^20] [^21] provide an extremely helpful mathematical understanding of the domain and function spaces implicit in programs. When applied to an applicative language (such as that of the "recursive programs" of [^16]), its foundations provide powerful tools for describing the language and for proving properties of programs. When applied to a von Neumann language, on the other hand, it provides a precise semantic description and is helpful in identifying trouble spots in the language. But the complexity of the language is mirrored in the complexity of the description, which is a bewildering collection of productions, domains, functions, and equations that is only slightly more helpful in proving facts about programs than the reference manual of the language, since it is less ambiguous. 
 
-指称语义学 [^23] 及其基础 [^20] [^21] 提供了一种非常有用的数学方法，可以理解程序中隐含的域 (domain) 和函数空间。当应用于应用型语言（例如引用文献[^16] 中的“递归程序”）时，它的基础为描述语言和证明程序性质提供了强大的工具。另一方面，当应用于冯··诺伊曼语言时，它可以提供精确的语义描述，并有助于识别语言中的问题所在。但是，语言的复杂性会体现在描述的复杂性上，它由一系列令人困惑的产生式（Production）、域、函数和方程组成，在证明程序事实方面仅比语言的参考手册略有帮助，因为它是更少歧义的。
+指称语义学 [^23] 及其基础 [^20] [^21] 提供了一种非常有用的数学方法，可以理解程序中隐含的域 (domain) 和函数空间。当应用于应用型语言（例如引用文献[^16] 中的“递归程序”）时，它的基础为描述语言和证明程序性质提供了强大的工具。另一方面，当应用于冯·诺伊曼语言时，它可以提供精确的语义描述，并有助于识别语言中的问题所在。但是，语言的复杂性会体现在描述的复杂性上，它由一系列令人困惑的产生式（Production）、域、函数和方程组成，在证明程序事实方面仅比语言的参考手册略有帮助，因为它是更少歧义的。
 
 [^16]: TODO
 [^20]: TODO
@@ -543,21 +543,21 @@ $$
 ax + bx = a + b
 $$
 
-> for $x$ (given that $a+b \not = 0$ ), we mechanically apply the distributive, identity, and cancellation laws, in succession, to obtain
+> for $x$ (given that $a+b \not = \textit{0}$ ), we mechanically apply the distributive, identity, and cancellation laws, in succession, to obtain
 
-对于 $x$ （假设 $a+b \not = 0$ ），我们依次使用分配律、幺元律和消去律，机械地将其变形得到
+对于 $x$ （假设 $a+b \not = \textit{0}$ ），我们依次使用分配律、幺元律和消去律，机械地将其变形得到
 
 $$
 \begin{aligned}
 (a + b) x &= a + b\\
-(a + b) x &= (a + b) 1\\
-x &= 1
+(a + b) x &= (a + b) \textit{1}\\
+x &= \textit{1}
 \end{aligned}
 $$
 
-> Thus we have proved that $x = 1$ without leaving the "language" of algebra. Von Neumann languages, with their grotesque syntax, offer few such possibilities for transforming programs.
+> Thus we have proved that $x = \textit{1}$ without leaving the "language" of algebra. Von Neumann languages, with their grotesque syntax, offer few such possibilities for transforming programs.
 
-因此，我们完全使用代数的“语言”证明了 $x = 1$ 。冯·诺伊曼语言由于其怪异的语法，无法像代数那样方便地进行程序变换。
+因此，我们完全使用代数的“语言”证明了 $x = \textit{1}$ 。冯·诺伊曼语言由于其怪异的语法，无法像代数那样方便地进行程序变换。
 
 As we shall see later, programs can be expressed in a language that has an associated algebra. This algebra can be used to transform programs and to solve some equations whose "unknowns" are programs, in much the same way one solves equations in high school algebra. Algebraic transformations and proofs use the language of the programs themselves, rather than the language of logic, which talks about programs.
 
@@ -687,7 +687,7 @@ FP 系统建立在使用一套固定的组合形式 (combining forms) 之上，�
 
 $$
 \begin{aligned}
-  \bot\quad 1.5\quad \phi\quad AB3\quad &< AB,\ 1,\ 2.3 >\\
+  \bot\quad \textit{1.5}\quad \phi\quad \textit{AB3}\quad &< AB,\ \textit{1},\ \textit{2.3} >\\
   < A, < < B >, C >, D >\ &< A,\ \bot > = \bot
 \end{aligned}
 $$
@@ -707,7 +707,7 @@ FP 系统只有一个运算，称为应用 （application）。如果 $f$ 是一
 
 $$
 \begin{aligned}
-+:< 1,\ 2 > &= 3 &tl:< A, B, C > &= < B, C >\\
++:< \textit{1},\ \textit{2} > &= \textit{3} &tl:< A, B, C > &= < B, C >\\
 1:< A, B, C > &= A &2:< A, B, C > &= B    
 \end{aligned}
 $$
@@ -776,7 +776,7 @@ $$
 $$
 \begin{aligned}
   \text{tl} : x \equiv x &= < x_1 >\ &&\to \phi;\\
-                       x &= < x_1, \dots , x_n > \And\ n \ge 2 &&\to\ < x_2, \dots , x_n >;
+                       x &= < x_1, \dots , x_n > \And\ n \ge \textit{2} &&\to < x_2, \dots , x_n >;
                        \bot   
 \end{aligned}
 $$
@@ -815,8 +815,8 @@ $$
 
 $$
 \begin{aligned}
-  \text{reverse} : x \equiv x &= \phi &\to& \phi ;\\
-                            x &= < x_1, \dots, x_n > &\to& < x_n, \dots, x_1 > ;
+  \text{reverse} : x \equiv x &= \phi &&\to \phi ;\\
+                            x &= < x_1, \dots, x_n > &&\to < x_n, \dots, x_1 > ;
                             \bot
 \end{aligned}
 $$
@@ -826,10 +826,10 @@ $$
 $$
 \begin{aligned}
   \text{distl} : x \equiv x &= < y, \phi > &&\to \phi;\\
-                          x &= < y, < z_1, \dots, z_n > > &&\to\ < < y, z_1 >, \dots, < y, z_n > >;
+                          x &= < y, < z_1, \dots, z_n > > &&\to < < y, z_1 >, \dots, < y, z_n > >;
                           \bot\\
   \text{distr} : x \equiv x &= < \phi, y > &&\to \phi;\\
-                          x &= < < y_1, \dots, y_n >, z > &&\to\ < < y_1, z >, \dots, < y_n, z > >;
+                          x &= < < y_1, \dots, y_n >, z > &&\to < < y_1, z >, \dots, < y_n, z > >;
                           \bot
 \end{aligned}
 $$
@@ -838,7 +838,7 @@ $$
 
 $$
 \text{length} : x \equiv x = < x_1, \dots, x_n >\ \to\ n;
-                  x = \phi \to 0;
+                  x = \phi \to \textit{0};
                   \bot
 $$
 
@@ -850,7 +850,7 @@ $$
   -: x \equiv x = < y, z > \And\ y,z\ \text{are numbers} \to\ y - z; \bot \\
   \times : x \equiv x = < y, z > \And\ y,z\ \text{are numbers} \to\ y \times z; \bot \\
   \div : x \equiv x = < y, z > \And\ y,z\ \text{are numbers} \to\ y \div z; \bot \\
-  (\text{where}\ y \div 0 = \bot)
+  (\text{where}\ y \div \textit{0} = \bot)
 \end{aligned}
 $$
 
@@ -858,11 +858,11 @@ $$
 
 $$
 \begin{aligned}
-  \text{trans} : x \equiv x &= < \phi, \dots, \phi>\ &\to& \phi;\\
-                          x &= < x_1, \dots, x_n >\ &\to& < y_1, \dots, y_m>;\bot\\
+  \text{trans} : x \equiv x &= < \phi, \dots, \phi>\ &&\to \phi;\\
+                          x &= < x_1, \dots, x_n >\ &&\to < y_1, \dots, y_m>;\bot\\
   \text{where}\\
                         x_i &= < x_{i1}, \dots, x_{im} > &&\text{and}\\
-                        y_j &= < x_{1j}, \dots, x_{nj} > &&, 1 \le i \le n, 1 \le j \le m.                      
+                        y_j &= < x_{1j}, \dots, x_{nj} > &&, \textit{1} \le i \le n, 1 \le j \le m.                      
 \end{aligned}
 $$
 
@@ -893,10 +893,10 @@ $$
 $$
 \begin{aligned}
   \text{1r} : x \equiv x &= < x_1, \dots, x_n > &&\to\ x_n;\bot\\  
-  \text{2r} : x \equiv x &= < x_1, \dots, x_n > \And\ n \ge 2 \ &&\to\ x_{n-1};\bot\\  
+  \text{2r} : x \equiv x &= < x_1, \dots, x_n > \And\ n \ge \textit{2} \ &&\to\ x_{n-1};\bot\\  
   \text{etc.} \\
   \text{tlr} : x \equiv x &= < x_1 >\ &&\to \phi;\\
-                         x &= < x_1, \dots, x_n > \And\ n \ge 2 \ &&\to\ < x_1, \dots, x_{n-1} >;\bot
+                         x &= < x_1, \dots, x_n > \And\ n \ge \textit{2} \ &&\to < x_1, \dots, x_{n-1} >;\bot
 \end{aligned}
 $$
 
@@ -905,8 +905,8 @@ $$
 $$
 \begin{aligned}
   \text{rotl} : x \equiv x &= \phi &&\to \phi;\\
-                         x &= < x_1 > &&\to\ < x_1 >;\\
-                         x &= < x_1, \dots, x_n > \And\ n \ge 2 \ &&\to\ < x_2, \dots, x_n, x_1 >;\bot\\
+                         x &= < x_1 > &&\to < x_1 >;\\
+                         x &= < x_1, \dots, x_n > \And\ n \ge \textit{2} \ &&\to < x_2, \dots, x_n, x_1 >;\bot\\
   \text{etc.}                          
 \end{aligned}
 $$
@@ -983,7 +983,7 @@ $$
 $$
 \begin{aligned}
   /f : x \equiv x &= < x_1 > &&\to x_1 ;\\
-                x &= < x_1, \dots, x_n > \And\ n \ge 2 && \to f : < x_1, /f : < x_2, \dots, x_n > > ;\bot
+                x &= < x_1, \dots, x_n > \And\ n \ge \textit{2} && \to f : < x_1, /f : < x_2, \dots, x_n > > ;\bot
 \end{aligned}
 $$
 
@@ -993,11 +993,12 @@ $$
 
 $$
 \begin{aligned}
-&/+ : < 4, 5, 6 > &=&\ + : < 4, + : < 5, /+ : < 6 > > > \\
-&                 &=&\ + : < 4, + : < 5, 6 > > \\
-&                 &=&\ + : < 4, 11 > \\ 
-&                 &=&\ 15 \\
-&/+ : \phi = 0                 
+&/+ : < \textit{4, 5, 6} > 
+  &=&\ + : < \textit{4}, + : < \textit{5}, /+ : < \textit{6} > > > \\
+ &&=&\ + : < \textit{4}, + : < \textit{5, 6} > > \\
+ &&=&\ + : < \textit{4, 11} > \\ 
+ &&=&\ \textit{15} \\
+&/+ : \phi = \textit{0}                 
 \end{aligned}
 $$
 
@@ -1007,8 +1008,8 @@ $$
 
 $$
 \begin{aligned}
-\alpha f : x \equiv x &= \phi &\to&\ \phi; \\
-                    x &= < x_1, \dots, x_n > &\to& < f : x_1, \dots, f : x_n >;
+\alpha f : x \equiv x &= \phi &&\to \phi; \\
+                    x &= < x_1, \dots, x_n > &&\to < f : x_1, \dots, f : x_n >;
                     \bot
 \end{aligned}
 $$
@@ -1028,7 +1029,7 @@ $$
 可得
 
 $$
-(\text{bu}\ +\ 1) : x = 1 + x
+(\text{bu}\ +\ \textit{1}) : x = \textit{1} + x
 $$
 
 **While**
@@ -1067,22 +1068,22 @@ $$
 
 [^1f]: 这里的 `1` 容易被直觉混淆视听，它不是数值，而是获取第一个元素的选择函数。
 
-> defines the function $\text{last}$, which is the same as $\text{last1}$ . Here in detail is how the definition would be used to compute $\text{last} : < 1, 2 >$ : 
+> defines the function $\text{last}$, which is the same as $\text{last1}$ . Here in detail is how the definition would be used to compute $\text{last} : < \textit{1, 2} >$ : 
 
-函数 $\text{last}$ 和 $\text{last1}$ 其实是等价的。下面就来看看 $\text{last} : < 1, 2 >$ 的计算过程：
+函数 $\text{last}$ 和 $\text{last1}$ 其实是等价的。下面就来看看 $\text{last} : < \textit{1, 2} >$ 的计算过程：
 
 $$
 \begin{aligned}
-&\text{last} : < 1, 2 >\\
-&\text{definition of last }             &\implies& (\text{null} \circ \text{tl} \to 1; \text{last} \circ \text{tl}) : < 1, 2 >\\
-&\text{action of the form } (p \to f;g) &\implies& \text{last} \circ \text{tl} : < 1, 2 > \\
-&                                       &&\text{since } \text{null} \circ \text{tl} : < 1, 2 > = \text{null} : < 2 > = F\\
-&\text{action of the form } f \circ g   &\implies& \text{last} : (\text{tl} : < 1, 2 >)\\
-&\text{definition of primitive tail }   &\implies& \text{last} : < 2 >\\
-&\text{definition of last }             &\implies& (\text{null} \circ \text{tl} \to 1; \text{last} \circ \text{tl}) : < 2 >\\
-&\text{action of the form } (p \to f;g) &\implies& 1 : < 2 >\\
-&                                       &&\text{since } \text{null} \circ \text{tl} : < 2 > = \text{null} : \phi = T\\
-&\text{definition of selector } 1       &\implies& 2
+&\text{last} : < \textit{1, 2} >\\
+&\text{definition of last }             &\implies& (\text{null} \circ \text{tl} \to 1; \text{last} \circ \text{tl}) : < \textit{1, 2} >\\
+&\text{action of the form } (p \to f;g) &\implies& \text{last} \circ \text{tl} : < \textit{1, 2} > \\
+&                                       &&\text{since } \text{null} \circ \text{tl} : < \textit{1, 2} > = \text{null} : < \textit{2} > = F\\
+&\text{action of the form } f \circ g   &\implies& \text{last} : (\text{tl} : < \textit{1, 2} >)\\
+&\text{definition of primitive tail }   &\implies& \text{last} : < \textit{2} >\\
+&\text{definition of last }             &\implies& (\text{null} \circ \text{tl} \to 1; \text{last} \circ \text{tl}) : < \textit{2} >\\
+&\text{action of the form } (p \to f;g) &\implies& 1 : < \textit{1, 2} >\\
+&                                       &&\text{since } \text{null} \circ \text{tl} : < \textit{2} > = \text{null} : \phi = T\\
+&\text{definition of selector } 1       &\implies& \textit{2}
 \end{aligned}
 $$
 
@@ -1146,21 +1147,22 @@ $$
 \end{aligned}
 $$
 
-> Here are some of the intermediate expressions an FP system would obtain in evaluating $\text{!} : 2$:
+> Here are some of the intermediate expressions an FP system would obtain in evaluating $\text{!} : \textit{2}$:
 
-让我们来以 $\text{!} : 2$ 为例，推导一下中间的过程[^fac]：
+让我们来以 $\text{!} : \textit{2}$ 为例，推导一下中间的过程[^fac]：
 
 $$
 \begin{aligned}
-  \text{!} : 2 &\implies (\text{eq0} \to \bar{1}; \times \circ [ \text{id}, \text{!} \circ \text{sub1} ]) : 2\\
-               &\implies \times \circ [ \text{id}, \text{!} \circ \text{sub1} ]) : 2\\
-               &\implies \times : < \text{id} : 2, \text{!} \circ \text{sub1} :2 >\\
-               &\implies \times : < 2, \text{!} : 1 >\\
-               &\implies \times : < 2, \times : < 1, \text{!} : 0 > >\\
-               &\implies \times : < 2, \times : < 1, \bar{1} > >\\   
-               &\implies \times : < 2, \times : < 1, 1 > >\\   
-               &\implies \times : < 2, 1 >\\   
-               &\implies 2.
+  \text{!} : \textit{2} 
+  &\implies (\text{eq0} \to \bar{1}; \times \circ [ \text{id}, \text{!} \circ \text{sub1} ]) : \textit{2}\\
+  &\implies \times \circ [ \text{id}, \text{!} \circ \text{sub1} ] : \textit{2}\\
+  &\implies \times : < \text{id} : \textit{2}, \text{!} \circ \text{sub1} : \textit{2} >\\
+  &\implies \times : < \textit{2}, \text{!} : \textit{1} >\\
+  &\implies \times : < \textit{2}, \times : < \textit{1}, \text{!} : \textit{0} > >\\
+  &\implies \times : < \textit{2}, \times : < \textit{1}, \bar{1} > >\\   
+  &\implies \times : < \textit{2}, \times : < \textit{1}, \textit{1} > >\\   
+  &\implies \times : < \textit{2}, \textit{1} >\\   
+  &\implies \textit{2}.
 \end{aligned}
 $$
 
@@ -1195,7 +1197,7 @@ $$
 $$
 \begin{aligned}
   &m = < m_1, \dots, m_r > \\
-  &\qquad \text{where } m_i = < m_{i1}, \dots, m_{is}> \text{for } i = 1, \dots, r.\\
+  &\qquad \text{where } m_i = < m_{i1}, \dots, m_{is}> \text{for } i = \textit{1}, \dots, r.\\
   &\textbf{Def } \text{MM} \equiv (\alpha \alpha \text{IP}) \circ (\alpha \text{distl}) \circ \text{distr} \circ [ 1, \text{trans} \circ 2 ]
 \end{aligned}
 $$
@@ -1203,7 +1205,7 @@ $$
 > The program $\text{MM}$ has four steps, reading from right to left; each is applied in turn, beginning with $[ 1, \text{trans} \circ 2 ]$ , to the result of its predecessor. 
 > If the argument is $< m,n >$, then the first step yields $< m, n' > \text{where } n' = \text{trans}:n$. 
 > The second step yields $< < m_1, n' >, ..., < m_r, n' > >$, where the $m_i$ are the rows of $m$. 
-> The third step, $\alpha \text{distl}$ , yields $< \text{distl} : < m_1, n' >, \dots, \text{distl} : < m_r, n' > > = < p_1, \dots, p_r >$ where $p_i = \text{distl} : < m_1, n' > = < < m_i, n_1' >, \dots, < m_i, n_s' > > \text{for } i = 1, \dots, r$ and $n_j'$ is the jth column of $n$ ( the jth row of $n'$ ). Thus $p_i$, a sequence of row and column pairs, corresponds to the i-th product row. 
+> The third step, $\alpha \text{distl}$ , yields $< \text{distl} : < m_1, n' >, \dots, \text{distl} : < m_r, n' > > = < p_1, \dots, p_r >$ where $p_i = \text{distl} : < m_1, n' > = < < m_i, n_1' >, \dots, < m_i, n_s' > > \text{for } i = \textit{1}, \dots, r$ and $n_j'$ is the jth column of $n$ ( the jth row of $n'$ ). Thus $p_i$, a sequence of row and column pairs, corresponds to the i-th product row. 
 > The operator $\alpha \alpha \text{IP}$ , or $\alpha (\alpha \text{IP})$ , causes $\alpha \text{IP}$ to be applied to each $p_i$ , which in turn causes $\text{IP}$ to be applied to each row and column pair in each $p_i$ . The result of the last step is therefore the sequence of rows comprising the product matrix. 
 > If either matrix is not rectangular, or if the length of a row of $m$ differs from that of a column of $n$, or if any element of $m$ or $n$ is not a number, the result is $\bot$ .
 
@@ -1211,7 +1213,7 @@ $\text{MM}$ 程序有四个步骤，从右往左，以此执行。从 $[ 1, \tex
 
 1. 执行第一步得到 $< m, n' > \text{where } n' = \text{trans}:n$ ；
 2. 执行第二步得到 $< < m_1, n' >, ..., < m_r, n' > >$ ， 其中 $m_i$ 是矩阵 $m$ 的一行；
-3. 执行第三步， $\alpha \text{distl}$ ，得到 $< \text{distl} : < m_1, n' >, \dots, \text{distl} : < m_r, n' > > = < p_1, \dots, p_r >$ ，其中 $p_i = \text{distl} : < m_1, n' > = < < m_i, n_1' >, \dots, < m_i, n_s' > > \text{for } i = 1, \dots, r$ ， 且 $n_j'$ 是 $n$ 的第 $j$ 列（也就是 $n'$ 的第 $j$ 行）。 $p_i$ 则是行列对序列对应的第 $i$ 个行积；
+3. 执行第三步， $\alpha \text{distl}$ ，得到 $< \text{distl} : < m_1, n' >, \dots, \text{distl} : < m_r, n' > > = < p_1, \dots, p_r >$ ，其中 $p_i = \text{distl} : < m_1, n' > = < < m_i, n_1' >, \dots, < m_i, n_s' > > \text{for } i = \textit{1}, \dots, r$ ， 且 $n_j'$ 是 $n$ 的第 $j$ 列（也就是 $n'$ 的第 $j$ 行）。 $p_i$ 则是行列对序列对应的第 $i$ 个行积；
 4. 最后一步， $\alpha \alpha \text{IP}$ ，或是 $\alpha (\alpha \text{IP})$ ， 即对每个 $p_i$ 应用 $\alpha \text{IP}$ ，也就是对每个 $p_i$ 的行列对应用 $\text{IP}$ 。这样一个由行序列构成其结果就是矩阵积。
 
 如果矩阵不是矩形，又或是 $m$ 的行数对不上 $n$ 的列数，还是二者的任意元素不是数字，其结果都是 $\bot$ 。
@@ -1226,5 +1228,80 @@ $\text{MM}$ 程序有四个步骤，从右往左，以此执行。从 $[ 1, \tex
 
 [^9]: TODO
 [^10]: TODO
+
+> 11.4 Remarks About FP Systems
+
+### 11.4 FP 系统小结
+
+> 11.4.1 FP systems as programming languages
+
+#### 11.4.1 FP 系统的编程语言
+
+> FP systems are so minimal that some readers may find it difficult to view them as programming languages. Viewed as such, a function $f$ is a program, an object $x$ is the contents of the store, and $f:x$ is the contents of the store after program $f$ is activated with $x$ in the store. The set of definitions is the program library. The primitive functions and the functional forms provided by the system are the basic statements of a particular programming language. Thus, depending on the choice of primitive functions and functional forms, the FP framework provides for a large class of languages with various styles and capabilities. The algebra of programs associated with each of these depends on its particular set of functional forms. The primitive functions, functional forms, and programs given in this paper comprise an effort to develop just one of these possible styles.
+
+对一些读者来说，FP 系统的极简设计可能令人难以将其视为一种编程语言。我们不妨这样来看：
+
+- 函数 $f$ 是一个程序；
+- 对象 $x$ 是存储器中的内容；
+- $f:x$ 是给定 $x$ 的情况下，执行程序 $f$ 之后得到的存储器中的新内容；
+- 定义的集合相当于程序库；
+- 系统提供的原生函数和函数形式相当于特定编程语言的基本语句。
+
+因此，通过选择不同的基本函数和函数形式，FP 框架可以支持种类繁多、风格各异的编程语言。每个框架所关联的程序代数都取决于其特定的函数形式集合。本文提供的基本函数、函数形式和程序示例，只是尝试开发其中的一种风格。
+
+> 11.4.2 Limitations of FP systems
+
+#### 11.4.2 FP 系统的局限
+
+> FP systems have a number of limitations. For example, a given FP system is a fixed language; it is not history sensitive: no program can alter the library of programs. It can treat input and output only in the sense that $x$ is an input and $f:x$ is the output. If the set of primitive functions and functional forms is weak, it may not be able to express every computable function.
+
+FP 系统是由一些限制的。例如：一旦定义了 FP 系统，它就变成一种固定语言；不具备前序敏感性；程序本身无法修改程序库的内容。FP 系统只能将初始状态视为输入（记为 $x$ ），将计算结果视为输出（记为 $f:x$ ）。如果 FP 系统提供的基本函数和函数形式不够强大，那么它就可能无法表达所有可计算的函数。
+ 
+> An FP system cannot compute a program since function expressions are not objects. Nor can one define new functional forms within an FP system. (Both of these limitations are removed in formal functional programming (FFP) systems in which objects "represent" functions.) Thus no FP system can have a function, $\text{apply}$ , such that 
+
+FP 系统无法计算程序本身，因为函数表达式并不是对象。也不能在系统内定义新的函数形式。（形式函数编程 (FFP) 系统移除了这两个限制，其中对象可以 “表示” 函数。）为此，没有 FP 系统可以使得函数 $\text{apply}$ 满足
+
+$$
+\text{apply} : < x, y > \equiv x : y
+$$
+
+> because, on the left, $x$ is an object, and, on the right, $x$ is a function. (Note that we have been careful to keep the set of function symbols and the set of objects distinct: thus $1$ is a function symbol, and $\it 1$ is an object.)
+
+这是因为等式左侧的 $x$ 是一个对象，而右侧的 $x$ 却是一个函数。（注意，我们是严格区分了函数符号和对象集合的，因此 $1$ 是一个函数符号，而 $\it 1$ 是一个对象。）
+
+> The primary limitation of FP systems is that they are not history sensitive. Therefore they must be extended somehow before they can become practically useful. For discussion of such extensions, see the sections on FFP and AST systems (Sections 13 and 14).
+
+FP 系统最主要的局限还是做不到前序敏感。如果想要让 FP 系统更具实用性，就需要进行扩展。文中提到了两种扩展方案，分别是 FFP 和 AST（参见第 13 和 14 节）。
+
+
+> 11.4.3 Expressive power of FP systems
+
+#### 11.4.3 FP 系统的表达力
+
+> Suppose two FP systems, FP1 and FP2, both have the same set of objects and the same set of primitive functions, but the set of functional forms of FP1 properly includes that of FP2. Suppose also that both systems cart express all computable functions on objects. Nevertheless, we can say that FP1 is more expressive than FP2, since every function expression in FP2 can be duplicated in FP1, but by using a functional form not belonging to FP2, FP1 can express some functions more directly and easily than FP2. 
+
+假设 FP1 和 FP2 拥有相同的对象集合和基本函数集合，但是 FP1 的函数形式集合严格包含 FP2 的函数形式集合。同时假设这两个系统都能够表达所有可计算的函数。尽管如此，我们仍然可以说 FP1 的表达能力比 FP2 强。因为，FP2 中的所有函数表达式在 FP1 中都可以表示。与此同时，FP1 可以更直接、更容易地表示某些函数。
+
+> I believe the above observation could be developed into a theory of the expressive power of languages in which a language A would be more expressive than language B under the following roughly stated conditions. First, form all possible functions of all types in A by applying all existing functions to objects and to each other in all possible ways until no new function of any type can be formed. (The set of objects is a type; the set of continuous functions $[T \to U]$ from type $T$ to type $U$ is a type. If $f \in [T \to U]$ and $t \in T$ , then $ft$ in $U$ can be formed by applying $f$ to $t$ .) Do the same in language B. Next, compare each type in A to the corresponding type in B. If, for every type, A's type includes B's corresponding type, then A is more expressive than B (or equally expressive). If some type of A's functions is incomparable to B's, then A and B are not comparable in expressive power.
+
+我认为之前关于 FP1 和 FP2 的比较可以扩展为一套语言表达能力的理论。根据以下大致的条件，我们可以判断语言 A 比语言 B 更具表达能力。首先，枚举语言 A 中所有类型的所有可能函数。具体方法是，不断地用现有函数作用于对象或其他函数，并重复该过程，直到无法生成任何新的函数为止。更进一步说，
+
+- 对象本身被视为一种类型；
+- 从类型 $T$ 到类型 $U$ 的连续函数集合记为 $[T \to U]$，它也是一种类型；
+- 当 $f \in [T \to U]$ 且 $t \in T$ ，则通过应用 $f$ 于 $t$ 可得 $ft \in U$ 。
+
+其次，将语言 A 中的每个类型与其在语言 B 中对应的类型进行比较。如果对于所有类型，A 的类型都包含 B 的对应类型，那么 A 就比 B 更具表达力 (或两者表达力相同)。如果 A 中存在某种类型的函数在 B 中找不到对应的类型 (incomparable)，那么 A 和 B 的表达能力就无法直接比较。
+
+> 11.4.4 Advantages of FP systems
+
+#### 11.4.4 FP 系统的优势
+
+> The main reason FP systems are considerably simpler than either conventional languages or lambda-calculus-based languages is that they use only the most elementary fixed naming system (naming a function in a definition) with a simple fixed rule of substituting a function for its name. Thus they avoid the complexities both of the naming systems of conventional languages and of the substitution rules of the lambda calculus. FP systems permit the definition of different naming systems (see Sections 13.3.4 and 14.7) for various purposes. These need not be complex, since many programs can do without them completely. Most importantly, they treat names as functions that can be combined with other functions without special treatment.
+
+FP 系统比传统语言或基于 lambda 演算的语言更简单的主要原因在于，使用一种最基本的固定命名系统（定义中为函数命名），替换也遵循简单固定的规则。从而避免了传统语言复杂冗长的命名系统，以及 lambda 演算中复杂的替换规则。FP 系统允许为不同的目的定义不同的命名系统 (见 13.3.4 和 14.7 节)。它无需多复杂，甚至许多程序甚至完全不需要用到这种特性。最重要的是，FP 系统将名称视为函数，可以与其他函数进行组合，而不需要特殊的处理方式。
+
+> FP systems offer an escape from conventional word-at-a-time programming to a degree greater even than APL [^12] (the most successful attack on the problem to date within the von Neumann framework) because they provide a more powerful set of functional forms within a unified world of expressions. They offer the opportunity to develop higher level techniques for thinking about, manipulating, and writing programs. 
+
+FP 系统比 APL [^12]（冯诺依曼架构下迄今为止最成功的尝试之一）更能摆脱传统逐字编程模式，那是因为它在一个统一的表达式世界中提供了一组更强大的函数形式，并让程序员可以用更抽象的概念来思考、操作和编写程序。
 
 [^booch]: <https://x.com/Grady_Booch/status/1016041695501139968?s=20>
