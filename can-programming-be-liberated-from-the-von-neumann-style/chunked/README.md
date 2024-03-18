@@ -90,5 +90,5 @@ origin: https://dl.acm.org/doi/epdf/10.1145/359576.359579
 8. [APL与逐字编程](./08-apl-versus-word-at-a-time-programming.md)
 9. [冯·诺伊曼语言缺乏有用的数学性质](./09-von-neumann-languages-lack-useful-mathematical-properties.md)
 10. [冯·诺伊曼语言替代方案是什么？](./10-what-are-the-alternatives-to-von-neumann-languages.md)
-11. [函数式编程系统（FP 系统）](./11-functional-programming-systems.md)
-12. [用于 FP 系统的程序代数](./12-the-algebra-of-programs-for-fp-systems.md)
+11. [函数式编程系统](./11-functional-programming-systems.md)
+12. [FP系统里的程序代数](./12-the-algebra-of-programs-for-fp-systems.md)

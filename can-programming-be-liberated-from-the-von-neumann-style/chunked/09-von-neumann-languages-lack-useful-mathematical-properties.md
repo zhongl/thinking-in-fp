@@ -10,14 +10,16 @@
 
 指称语义学 [^23] 及其基础 [^20] [^21] 提供了一种非常有用的数学方法，可以理解程序中隐含的域 (domain) 和函数空间。当应用于应用型语言（例如引用文献[^16] 中的“递归程序”）时，它的基础为描述语言和证明程序性质提供了强大的工具。另一方面，当应用于冯·诺伊曼语言时，它可以提供精确的语义描述，并有助于识别语言中的问题所在。但是，语言的复杂性会体现在描述的复杂性上，它由一系列令人困惑的产生式（Production）、域、函数和方程组成，在证明程序事实方面仅比语言的参考手册略有帮助，因为它是更少歧义的。
 
-[^16]: TODO
-[^20]: TODO
-[^21]: TODO
-[^23]: TODO
+[^16]: [Manna, Z., Ness, S., and Vuillemin, J. Inductive methods for proving properties of programs. Comm.4 CM 16,8 (Aug. 1973) 491-502.](https://dl.acm.org/doi/abs/10.1145/800235.807070)
+[^20]: [Reynolds, J.C. Notes on a lattice-theoretic approach to the theory of computation. Dept. Syst. and Inform. Sci., Syracuse U., Syracuse, N.Y., 1972](http://scholar.google.com/scholar?hl=en&q=Reynolds%2C+J.C.+Notes+on+a+lattice-theoretic+approach+to+the+theory+of+computation.+Dept.+Syst.+and+Inform.+Sci.%2C+Syracuse+U.%2C+Syracuse%2C+N.Y.%2C+1972.)
+[^21]: [Scott, D. Outline of a mathematical theory of computation. Proc. 4th Princeton Conf. on Inform. Sci. and Syst., 1970.](http://scholar.google.com/scholar?hl=en&q=Scott%2C+D.+Outline+of+a+mathematical+theory+of+computation.+Proc.+4th+Princeton+Conf.+on+Inform.+Sci.+and+Syst.%2C+1970.)
+[^23]: [Scott, D., and Strachey, C. Towards a mathematical semantics for computer languages. Proc. Symp. on Comptrs. and Automata, Polytechnic Inst. of Brooklyn, 1971.](http://scholar.google.com/scholar?hl=en&q=Scott%2C+D.%2C+and+Strachey%2C+C.+Towards+a+mathematical+semantics+for+computer+languages.+Proc.+Symp.+on+Comptrs.+and+Automata%2C+Polytechnic+Inst.+of+Brooklyn%2C+1971.)
 
 > Axiomatic semantics [^11] precisely restates the inelegant properties of von Neumann programs (i.e., transformations on states) as transformations on predicates. The word-at-a-time, repetitive game is not thereby changed, merely the playing field. The complexity of this axiomatic game of proving facts about von Neumann programs makes the successes of its practitioners all the more admirable. Their success rests on two factors in addition to their ingenuity: First, the game is restricted to small, weak subsets of full von Neumann languages that have states vastly simpler than real ones. Second, the new playing field (predicates and their transformations) is richer, more orderly and effective than the old (states and their transformations). But restricting the game and transferring it to a more effective domain does not enable it to handle real programs (with the necessary complexities of procedure calls and aliasing), nor does it eliminate the clumsy properties of the basic von Neumann style. As axiomatic semantics is extended to cover more of a typical von Neumann language, it begins to lose its effectiveness with the increasing complexity that is required. 
 
-公理语义学将冯·诺伊曼程序 (通过状态转换) 的非优雅性质精确地重新表述为谓词 (predicate) 的转换。逐字处理、重复的游戏并没有因此改变，只是改变了赛场。证明冯·诺伊曼程序事实的公理游戏非常复杂，这使得实践者的成功更加令人钦佩。他们的成功除了才智之外，还依赖于两个因素：首先，游戏仅限于冯·诺伊曼语言的较小、较弱的子集，这些子集的状态比现实世界的状态简单得多。其次，新的赛场（谓词及其转换）比旧的赛场（状态及其转换）更丰富、更有序、更有效。但是，限制游戏范围并转移到更有效的领域并不能处理真实程序（具有必要的过程调用和别名复杂性），也不能消除冯诺·伊曼风格的基本笨拙特性。随着公理语义学扩展到涵盖更多典型的冯诺伊曼语言，其有效性会随着所需复杂性的增加而丧失。
+公理语义学[^11]将冯·诺伊曼程序 (通过状态转换) 的非优雅性质精确地重新表述为谓词 (predicate) 的转换。逐字处理、重复的游戏并没有因此改变，只是改变了赛场。证明冯·诺伊曼程序事实的公理游戏非常复杂，这使得实践者的成功更加令人钦佩。他们的成功除了才智之外，还依赖于两个因素：首先，游戏仅限于冯·诺伊曼语言的较小、较弱的子集，这些子集的状态比现实世界的状态简单得多。其次，新的赛场（谓词及其转换）比旧的赛场（状态及其转换）更丰富、更有序、更有效。但是，限制游戏范围并转移到更有效的领域并不能处理真实程序（具有必要的过程调用和别名复杂性），也不能消除冯诺·伊曼风格的基本笨拙特性。随着公理语义学扩展到涵盖更多典型的冯诺伊曼语言，其有效性会随着所需复杂性的增加而丧失。
+
+[^11]: [Hoare, C.A.R. An axiomatic basis for computer programming. Comm. ,4CM 12, 10 (Oct. 1969), 576-583.](https://dl.acm.org/doi/10.1145/363235.363259)
 
 > Thus denotational and axiomatic semantics are descriptive formalisms whose foundations embody elegant and powerful concepts; but using them to describe a von Neumann language can not produce an elegant and powerful language any more than the use of elegant and modem machines to build an Edsel can produce an elegant and modem car.
 

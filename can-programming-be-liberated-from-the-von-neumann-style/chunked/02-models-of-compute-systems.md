@@ -120,9 +120,9 @@
 程序清晰度
 :	程序可清晰，在概念上有用。
 
-[^5]: TODO 
-[^6]: TODO 
-[^17]: TODO 
+[^5]: [Church, A. The Calculi of Lambda-Conversion. Princeton U. Press, Princeton, N.J., 1941.](https://dl.acm.org/doi/10.5555/1096495)
+[^6]: [Curry, H.B., and Feys, R. Combinatory Logic, Vol. 1. North- Holland Pub. Co., Amsterdam, 1958.](http://scholar.google.com/scholar?hl=en&q=Curry%2C+H.B.%2C+and+Feys%2C+R.+Combinatory+Logic%2C+Vol.+1.+North-+Holland+Pub.+Co.%2C+Amsterdam%2C+1958.)
+[^17]: [McCarthy, J. Recursive functions of symbolic expressions and their computation by machine, Pt. 1. Comm. ,4CM 3, 4 (April 1960), 184-195.](https://dl.acm.org/doi/10.1145/367177.367199) 
 
 > 2.2.3 Von Neumann models
 
@@ -163,6 +163,6 @@
 
 诚然，上述的分类是粗略地，有待商榷地。 一些最近的模型可能不容易归类其中。 例如，由Arvind和Gostelow开发的数据流语言[^1]，Dennis [^7]，Kosinski [^13]，以及其他人部分满足简单操作模型，但它们的程序比同类之前的模型更清晰，或许能勉强算得上归约语义。 无论如何，这个分类只是一个大框架性的讨论。 我们应该将焦点放在应用型模型和冯·诺伊曼模型上。
 
-[^1]:  TODO
-[^7]:  TODO
-[^13]:  TODO
+[^1]:  [Arvind, and Gostelow, K.P. A new interpreter for data flow schemas and its implications for computer architecture. Tech. Rep. No. 72, Dept. Comptr. Sci., U. of California, Irvine, Oct. 1975.](http://scholar.google.com/scholar?hl=en&q=Arvind%2C+and+Gostelow%2C+K.P.+A+new+interpreter+for+data+flow+schemas+and+its+implications+for+computer+architecture.+Tech.+Rep.+No.+72%2C+Dept.+Comptr.+Sci.%2C+U.+of+California%2C+Irvine%2C+Oct.+1975.)
+[^7]:  [Dennis, J.B. First version of a data flow procedure language. Tech. Mem. No. 61, Lab. for Comptr. Sci., M.I.T., Cambridge, Mass., May 1973.](http://scholar.google.com/scholar?hl=en&q=Dennis%2C+J.B.+First+version+of+a+data+flow+procedure+language.+Tech.+Mem.+No.+61%2C+Lab.+for+Comptr.+Sci.%2C+M.I.T.%2C+Cambridge%2C+Mass.%2C+May+1973.)
+[^13]:  [Kosinski, P. A data flow programming language. Rep. RC 4264, IBM T.J. Watson Research Ctr., Yorktown Heights, N.Y., March 1973.](http://scholar.google.com/scholar?hl=en&q=Kosinski%2C+P.+A+data+flow+programming+language.+Rep.+RC+4264%2C+IBM+T.J.+Watson+Research+Ctr.%2C+Yorktown+Heights%2C+N.Y.%2C+March+1973.)

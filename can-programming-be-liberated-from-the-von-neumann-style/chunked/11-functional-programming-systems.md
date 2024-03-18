@@ -12,15 +12,18 @@
 
 > An FP system is founded on the use of a fixed set of combining forms called functional forms. These, plus simple definitions, are the only means of building new functions from existing ones; they use no variables or substitution rules, and they become the operations of an associated algebra of programs. All the functions of an FP system are of one type: they map objects into objects and always take a single argument.
 
-FP 系统建立在使用一套固定的组合形式 (combining forms) 之上，这些形式被称为函数形式 (functional forms)。这些函数形式，加上简单的定义，是构建新函数的唯一方法。没有变量或替换规则，它们就是程序代数相关的运算操作。FP 系统中的所有函数都是一种类型：将一个对象映射为另一个对象，并且总是接受单个参数。
+FP 系统建立在使用一套固定的组合形式 (combining forms) 之上，这些形式被称为函数式 (functional forms)[^ff]。这些函数式，加上简单的定义，是构建新函数的唯一方法。没有变量或替换规则，它们就是程序代数相关的运算操作。FP 系统中的所有函数都是一种类型：将一个对象映射为另一个对象，并且总是接受单个参数。
+
+[^ff]: [**Functional**](https://en.wikipedia.org/wiki/Functional_(mathematics))是个数学概念，在译者接触的中文语料里大多译为“泛函”，即便如此大概率（想我一样）缺乏数学背景的读者依旧无法理解。因此，这里以及后文选择使用“函数式”（即有关函数的表达形式，或者是函数的函数）作为**Functional**和**Functional Form** 的统一译文。此外，这与函数式编程（Functional Programming）也呼应一致了。
+
 
 > In contrast, a lambda-calculus based system is founded on the use of the lambda expression, with an associated set of substitution rules for variables, for building new functions. The lambda expression (with its substitution rules) is capable of defining all possible computable functions of all possible types and of any number of arguments. This freedom and power has its disadvantages as well as its obvious advantages. It is analogous to the power of unrestricted control statements in conventional languages: with unrestricted freedom comes chaos. If one constantly invents new combining forms to suit the occasion, as one can in the lambda calculus, one will not become familiar with the style or useful properties of the few combining forms that are adequate for all purposes. Just as structured programming eschews many control statements to obtain programs with simpler structure, better properties, and uniform methods for understanding their behavior, so functional programming eschews the lambda expression, substitution, and multiple function types. It thereby achieves programs built with familiar functional forms with known useful properties. These programs are so structured that their behavior can often be understood and proven by mechanical use of algebraic techniques similar to those used in solving high school algebra problems.
 
-与之相对的，lambda 演算的系统，它通过 lambda 表达式（lambda expression）和相关的变量替换规则来构建新函数。lambda 表达式（连同其替换规则）能够定义所有可能的可计算函数，涵盖所有数据类型和参数个数。这种自由度和强大性的缺点与优点同样明显。如同传统语言中不受限制地控制流语句：过度的自由会导致混乱。如果像 lambda 演算那样，为了满足特定情境而不断发明新的组合形式，程序员将无法熟悉少数能够满足所有需求的组合形式的风格或有用特性。就像结构化编程为了获得结构更简单、性质更好、理解行为方法更统一的程序而避免使用许多控制语句一样，函数式编程也摒弃了 lambda 表达式、替换和多函数类型。通过这种方式，它使用具有已知有用性质的熟悉函数形式来构建程序。这些程序的结构使得人们通常可以通过类似于高中代数问题求解的代数技术，机械地理解和证明其行为。
+与之相对的，lambda 演算的系统，它通过 lambda 表达式（lambda expression）和相关的变量替换规则来构建新函数。lambda 表达式（连同其替换规则）能够定义所有可能的可计算函数，涵盖所有数据类型和参数个数。这种自由度和强大性的缺点与优点同样明显。如同传统语言中不受限制地控制流语句：过度的自由会导致混乱。如果像 lambda 演算那样，为了满足特定情境而不断发明新的组合形式，程序员将无法熟悉少数能够满足所有需求的组合形式的风格或有用特性。就像结构化编程为了获得结构更简单、性质更好、理解行为方法更统一的程序而避免使用许多控制语句一样，函数式编程也摒弃了 lambda 表达式、替换和多函数类型。通过这种方式，它使用具有已知有用性质的熟悉函数式来构建程序。这些程序的结构使得人们通常可以通过类似于高中代数问题求解的代数技术，机械地理解和证明其行为。
 
 > Functional forms, unlike most programming constructs, need not be chosen on an ad hoc basis. Since they are the operations of an associated algebra, one chooses only those functional forms that not only provide powerful programming constructs, but that also have attractive algebraic properties: one chooses them to maximize the strength and utility of the algebraic laws that relate them to other functional forms of the system. 
 
-函数形式不像大多数编程结构那样，无需临时决定。考虑到它们是相关代数的运算，选择那些既能提供强大编程结构，又具有吸引人的代数性质的函数形式：以最大化与系统其他函数形式相关的代数定律的强度和效用。
+函数式不像大多数编程结构那样，无需临时决定。考虑到它们是相关代数的运算，选择那些既能提供强大编程结构，又具有吸引人的代数性质的函数式：以最大化与系统其他函数式相关的代数定律的强度和效用。
 
 > In the following description we shall be imprecise in not distinguishing between (a) a function symbol or expression and (b) the function it denotes. We shall indicate the symbols and expressions used to denote functions by example and usage. Section 13 describes a formal extension of FP systems (FFP systems); they can serve to clarify any ambiguities about FP systems.
 
@@ -47,7 +50,7 @@ FP 系统建立在使用一套固定的组合形式 (combining forms) 之上，�
 1. $\rm O$ 代表对象；
 2. $\rm F$ 代表函数 $f$ ，能将一类对象映射为另一类对象；
 3. 操作，即应用；
-4. $\bf F$ 代表函数形式； 用于组合已有的函数，或对象，成新的函数 $\rm F$ ；
+4. $\bf F$ 代表函数式； 用于组合已有的函数，或对象，成新的函数 $\rm F$ ；
 5. $\rm D$ 代表定义，用于定义 $\rm F$ 中函数，并为之命名。
 
 > What follows is an informal description of each of the above entities with examples.
@@ -109,7 +112,7 @@ $$
 
 > All functions $f$ in $\rm F$ map objects into objects and are *bottom-preserving*: $f:\bot = \bot$ , for all $f$ in $\rm F$ . Every function in $\rm F$ is either *primitive*, that is, supplied with the system, or it is *defined* (see below), or it is a *functional form* (see below).
 
-所有函数 $f$ 都属于集合 $\rm F$ ，它们将对象映射为对象，并且都满足*底部保留*：对于集合 $\rm F$ 中的任何函数 $f$ ，都成立 $f:\bot = \bot$ 。 $\rm F$ 里的每个函数只可能是 *原生函数*（primitive），由系统直接提供；或是，*定义函数* （defined）；再就是，函数形式（functional form）。
+所有函数 $f$ 都属于集合 $\rm F$ ，它们将对象映射为对象，并且都满足*底部保留*：对于集合 $\rm F$ 中的任何函数 $f$ ，都成立 $f:\bot = \bot$ 。 $\rm F$ 里的每个函数只可能是 *原生函数*（primitive），由系统直接提供；或是，*定义函数* （defined）；再就是，函数式（functional form）。
 
 > It is sometimes useful to distinguish between two cases in which $f:x = \bot$ . If the computation for $f:x$ terminates and yields the object $\bot$ , we say $f$ is *undefined* at $x$ , that is, $f$ terminates but has no meaningful value at $x$ . Otherwise we say $f$ is *nonterminating* at $x$ .
 
@@ -126,7 +129,7 @@ $$
 
 我们打算为 FP 系统提供广泛实用且强大的基本函数，而不是一些较弱的函数让用户再去定义更强大的函数。以下示例定义了一些典型的基本函数，它们中的许多将在后面的程序示例中用到。下面的定义使用了一种 McCarthy 条件表达式的变体 [^17]，因此我们将
 
-[^17]: TODO
+[^17]: [McCarthy, J. Recursive functions of symbolic expressions and their computation by machine, Pt. 1. Comm. ,4CM 3, 4 (April 1960), 184-195.](https://dl.acm.org/doi/10.1145/367177.367199)
 
 $$
 p_1 \to e_1; \dots; p_n \to e_n; e_{n+1}
@@ -304,11 +307,11 @@ $$
 
 > 11.2.4 Functional forms, $\bf F$
 
-#### 11.2.4 函数形式， $\bf F$
+#### 11.2.4 函数式， $\bf F$
 
 > A functional form is an expression denoting a function; that function depends on the functions or objects which are the parameters of the expression. Thus, for example, if $f$ and $g$ are any functions, then $f \circ g$ is a functional form, the composition of $f$ and $g$, $f$ and $g$ are its parameters, and it denotes the function such that, for any object $x$ ,
 
-函数形式是关于函数的表达式，即函数依赖作为表达式参数的其他函数或对象。比如，对任意函数 $f$ 和 $g$ ，则 $f \circ g$ 就是一种函数形式，表示对参数 $f$ 和 $g$ 的复合应用。这样的函数对任意对象 $x$ 而言，都满足：
+函数式是关于函数的表达式，即函数依赖作为表达式参数的其他函数或对象。比如，对任意函数 $f$ 和 $g$ ，则 $f \circ g$ 就是一种函数式，表示对参数 $f$ 和 $g$ 的复合应用。这样的函数对任意对象 $x$ 而言，都满足：
 
 $$
 (f \circ g) : x = f : (g : x)
@@ -316,7 +319,7 @@ $$
 
 > Some functional forms may have objects as parameters. For example, for any object $x$ , $\={x}$ is a functional form, the *constant* function of $x$ , so that for any object $y$ 
 
-有一些函数形式会有对象做参数。比如，对任意对象 $x$ ， $\bar{x}$ 则是一个关于 $x$ 的*常量*函数的形式，因此对于任意对象 $y$ 而言， 都满足：
+有一些函数式会有对象做参数。比如，对任意对象 $x$ ， $\bar{x}$ 则是一个关于 $x$ 的*常量*函数的形式，因此对于任意对象 $y$ 而言， 都满足：
 
 $$
 \bar{x} : y \equiv y = \bot \to \bot;x.
@@ -328,7 +331,7 @@ $$
 
 > Below we give some functional forms, many of which are used later in this paper. We use $p$ , $f$ , and $g$ with and without subscfipts to denote arbitrary functions; and $x, x_1, \dots x_n, y$ as arbitrary objects. Square brackets $[ \dots ]$ are used to indicate the functional form for construction, which denotes a function, whereas pointed brackets $< \dots >$ denote sequences, which are objects. Parentheses are used both in particular functional forms (e.g., in *condition*) and generally to indicate grouping. 
 
-以下提到的一些函数形式，大都会在后文用到。像 $p$ ， $f$ 和 $g$ 无论是否带下标，都表示任何函数。 $x, x_1, \dots x_n, y$ 表示任意对象。方括号 $[ \dots ]$ 表示构造型的函数形式， 其中都是函数。尖括号 $< \dots >$ 表示序列，其中是对象。圆括号既表示特定的函数形式（例如在条件表达式中），也可以表示分组。
+以下提到的一些函数式，大都会在后文用到。像 $p$ ， $f$ 和 $g$ 无论是否带下标，都表示任何函数。 $x, x_1, \dots x_n, y$ 表示任意对象。方括号 $[ \dots ]$ 表示构造型的函数式， 其中都是函数。尖括号 $< \dots >$ 表示序列，其中是对象。圆括号既表示特定的函数式（例如在条件表达式中），也可以表示分组。
 
 **Composition**
 
@@ -357,7 +360,7 @@ $$
 
 > Conditional expressions (used outside of FP systems to describe their functions) and the functional form condition are both identified by " $\to$ ". They are quite different although closely related, as shown in the above definitions. But no confusion should arise, since the elements of a conditional expression all denote values, whereas the elements of the functional form condition all denote functions, never values. When no ambiguity arises we omit right-associated parentheses; we write, for example, $p_1 \to f_1; p_2 \to f_2;g$ for $(p_1 \to f_1; (p_2 \to f_2;g))$.
 
-条件表达式 (用在 FP 系统之外描述其函数) 和函数形式条件都用符号 “ $\to$ ” 表示，虽然密切相关，但从以上定义来看有很大区别 。不要混淆彼此，条件表达式里的元素都是某个值，而函数形式条件中的元素则是某个函数。当不会引起歧义时，可以省略向右关联（right-associated）的括号来简化表示， 如： $p_1 \to f_1; p_2 \to f_2;g$ 是 $(p_1 \to f_1; (p_2 \to f_2;g))$ 的简化表示。
+条件表达式 (用在 FP 系统之外描述其函数) 和函数式条件都用符号 “ $\to$ ” 表示，虽然密切相关，但从以上定义来看有很大区别 。不要混淆彼此，条件表达式里的元素都是某个值，而函数式条件中的元素则是某个函数。当不会引起歧义时，可以省略向右关联（right-associated）的括号来简化表示， 如： $p_1 \to f_1; p_2 \to f_2;g$ 是 $(p_1 \to f_1; (p_2 \to f_2;g))$ 的简化表示。
 
 **Constant** 
 
@@ -380,7 +383,7 @@ $$
 
 > If $f$ has a unique right unit $u_f \not = \bot$ , where $f : < x, u_f >\ \in \set{ x, \bot }$ for all objects $x$ , then the above definition is extended: $/f : \phi = u_f$ . Thus 
 
-当函数 $f$ 存在唯一的右单元（right unit）满足 $u_f \not = \bot$ [^ru]， 且对所有对象 $x$ 满足 $f : < x, u_f >\ \in \set{ x, \bot }$ ，由此可得  $/f : \phi = u_f$ 。具体来说：
+当函数 $f$ 存在唯一的右单元（right unit）满足 $u_f \not = \bot$ ， 且对所有对象 $x$ 满足 $f : < x, u_f >\ \in \set{ x, \bot }$ ，由此可得  $/f : \phi = u_f$ 。具体来说：
 
 $$
 \begin{aligned}
@@ -392,8 +395,6 @@ $$
 &/+ : \phi = \textit{0}                 
 \end{aligned}
 $$
-
-[^ru]: TODO
 
 **Apply to all**
 
@@ -435,7 +436,7 @@ $$
 
 > The above functional forms provide an effective method for computing the values of the functions they denote (if they terminate) provided one can effectively apply their function parameters.
 
-一个函数能有效的应用其函数参数（且能终止的话），以上函数形式就能提供了一种高效的方法去计算它们。
+一个函数能有效的应用其函数参数（且能终止的话），以上函数式就能提供了一种高效的方法去计算它们。
 
 > 11.2.5 Definitions
 
@@ -451,7 +452,7 @@ $$
 
 > where the left side $l$ is an unused function symbol and the right side $r$ is a functional form (which may depend on $l$ ). It expresses the fact that the symbol $l$ is to denote the function given by $r$ . Thus the definition $\textbf{Def}\ \text{last1} \equiv 1 \circ reverse$ defines the function $\text{last1}$ that produces the last element of a sequence (or $\bot$ ). Similarly, 
 
-左边的 $l$ 是没有用过的函数符号，右边的 $r$ 是函数形式（它可能依赖 $l$ ）。它表达了符号 $l$ 就是由 $r$ 给定的函数。因此，定义 $\textbf{Def}\ \text{last1} \equiv 1 \circ reverse$ [^1f]的意思是，函数 $\text{last1}$ 可以获得一个序列的最后一个元素（或 $\bot$ ）。类似的
+左边的 $l$ 是没有用过的函数符号，右边的 $r$ 是函数式（它可能依赖 $l$ ）。它表达了符号 $l$ 就是由 $r$ 给定的函数。因此，定义 $\textbf{Def}\ \text{last1} \equiv 1 \circ reverse$ [^1f]的意思是，函数 $\text{last1}$ 可以获得一个序列的最后一个元素（或 $\bot$ ）。类似的
 
 $$
 \textbf{Def}\ \text{last} \equiv \text{null} \circ \text{tl} \to 1; \text{last} \circ \text{tl}
@@ -492,7 +493,7 @@ $$
 
 1. 一组原子的集合 $\rm A$ （也就是一组对象的集合）；
 2. 一组原生函数的集合 $\rm P$ ；
-3. 一组函数形式的集合 $\bf F$ ；
+3. 一组函数式的集合 $\bf F$ ；
 4. 一组良好定义的集合 $\rm D$ 。
    
 要想理解这样一个系统的语义，就必须弄明白对于任意函数 $f$ 和任意对象 $x$ 而言， $f:x$ 是如何计算。 对 $f$ 来说，只有以下四种可能：
@@ -506,14 +507,14 @@ $$
 > (4) none of the above. 
 
 1. $f$ 是原生函数；
-2. $f$ 是函数形式；
+2. $f$ 是函数式；
 3. 存在一种定义 $\rm D$ , $\textbf{Def } f \equiv r$ ；以及
 4. 以上均不是。
 
 > If $f$ is a primitive function, then one has its description and knows how to apply it. If $f$ is a functional form, then the description of the form tells how to compute $f:x$ in terms of the parameters of the form, which can be done by further use of these rules. If $f$ is defined, $\textbf{Def } f \equiv r$ , as in (3), then to find $f:x$ one computes $r:x$ , which can be done by further use of these rules. If none of these, then $f:x \equiv \bot$ . Of course, the use of these rules may not terminate for some $f$ and some $x$ , in which case we assign the value $f:x \equiv \bot$ .
 
 1. 若 $f$ 是原生函数，则根据描述应用它；
-2. 若 $f$ 是函数形式，则形式的描述交代了如何通过其型参来运算 $f:x$ ，再进一步运用以上规则；
+2. 若 $f$ 是函数式，则形式的描述交代了如何通过其型参来运算 $f:x$ ，再进一步运用以上规则；
 3. 若 $f$ 是 $\textbf{Def } f \equiv r$ ，则将 $f:x$ 以 $r:x$ 进行运算，再进一步运用以上规则；
 4. 以上均不是，则表示为 $f:x \equiv \bot$ 。当然，在对一些 $f$ 和 $x$ 应用本规则无法停止时，同样表示为 $f:x \equiv \bot$ 。
 
@@ -540,7 +541,7 @@ $$
 
 > Here are some of the intermediate expressions an FP system would obtain in evaluating $\text{!} : \textit{2}$:
 
-让我们来以 $\text{!} : \textit{2}$ 为例，推导一下中间的过程[^fac]：
+让我们来以 $\text{!} : \textit{2}$ 为例，推导一下中间的过程：
 
 $$
 \begin{aligned}
@@ -556,8 +557,6 @@ $$
   &\implies \textit{2}.
 \end{aligned}
 $$
-
-[^fac]: 中间过程译者做了一些重新排版和修订，与原文有所出入。
 
 > In Section 12 we shall see how theorems of the algebra of FP programs can be used to prove that $\text{!}$ is the factorial function. 
 
@@ -617,8 +616,8 @@ $\text{MM}$ 程序有四个步骤，从右往左，以此执行。从 $[ 1, \tex
 
 虽然程序 $\text{MM}$ 的形式可能看起来陌生让人费解，但它却清晰地描述了矩阵乘法的核心运算。不像大多数程序那样，过度限定计算过程或隐藏细节。由此可见，通过形式化变换可以得到许多简洁的程序。虽然，在冯诺依曼计算机上运行时，其效率天生低下，因为它会占用大量的空间；但是，我们可以从中推导高效的版本，可以想象一些 FP 系统的实现能够高效执行，并像程序本身那样浪费空间。关于效率的问题超出了本文的讨论范围，但我必须指出，函数式编程语言如此简单，且避免了 lambda 类型变量和数据的绑定关系，可能为系统带来一些优势。比如，可以采用某种形式的惰性求值 (lazy evaluation) [^9] [^10] ，以及更有效的数据管理，而这些是基于 lambda 演算的系统可能难以实现。
 
-[^9]: TODO
-[^10]: TODO
+[^9]: [Friedman, D.P., and Wise, D.S. CONS should not evaluate its arguments. In Automata, Languages and Programming, S. Michaelson and R. Milner, Eds., Edinburgh U. Press, Edinburgh, 1976, pp. 257-284.](http://scholar.google.com/scholar?hl=en&q=Friedman%2C+D.P.%2C+and+Wise%2C+D.S.+CONS+should+not+evaluate+its+arguments.+In+Automata%2C+Languages+and+Programming%2C+S.+Michaelson+and+R.+Milner%2C+Eds.%2C+Edinburgh+U.+Press%2C+Edinburgh%2C+1976%2C+pp.+257-284.)
+[^10]: [Henderson, P., and Morris, J.H. Jr. A lazy evaluator. Conf. Record Third ACM Symp. on Principles of Programming Languages, Atlanta, Ga., Jan. 1976, pp. 95-103.](https://dl.acm.org/doi/10.1145/800168.811543)
 
 > 11.4 Remarks About FP Systems
 
@@ -636,9 +635,9 @@ $\text{MM}$ 程序有四个步骤，从右往左，以此执行。从 $[ 1, \tex
 - 对象 $x$ 是存储器中的内容；
 - $f:x$ 是给定 $x$ 的情况下，执行程序 $f$ 之后得到的存储器中的新内容；
 - 定义的集合相当于程序库；
-- 系统提供的原生函数和函数形式相当于特定编程语言的基本语句。
+- 系统提供的原生函数和函数式相当于特定编程语言的基本语句。
 
-因此，通过选择不同的基本函数和函数形式，FP 框架可以支持种类繁多、风格各异的编程语言。每个框架所关联的程序代数都取决于其特定的函数形式集合。本文提供的基本函数、函数形式和程序示例，只是尝试开发其中的一种风格。
+因此，通过选择不同的基本函数和函数式，FP 框架可以支持种类繁多、风格各异的编程语言。每个框架所关联的程序代数都取决于其特定的函数式集合。本文提供的基本函数、函数式和程序示例，只是尝试开发其中的一种风格。
 
 > 11.4.2 Limitations of FP systems
 
@@ -646,11 +645,11 @@ $\text{MM}$ 程序有四个步骤，从右往左，以此执行。从 $[ 1, \tex
 
 > FP systems have a number of limitations. For example, a given FP system is a fixed language; it is not history sensitive: no program can alter the library of programs. It can treat input and output only in the sense that $x$ is an input and $f:x$ is the output. If the set of primitive functions and functional forms is weak, it may not be able to express every computable function.
 
-FP 系统是由一些限制的。例如：一旦定义了 FP 系统，它就变成一种固定语言；不具备前序敏感性；程序本身无法修改程序库的内容。FP 系统只能将初始状态视为输入（记为 $x$ ），将计算结果视为输出（记为 $f:x$ ）。如果 FP 系统提供的基本函数和函数形式不够强大，那么它就可能无法表达所有可计算的函数。
+FP 系统是由一些限制的。例如：一旦定义了 FP 系统，它就变成一种固定语言；不具备前序敏感性；程序本身无法修改程序库的内容。FP 系统只能将初始状态视为输入（记为 $x$ ），将计算结果视为输出（记为 $f:x$ ）。如果 FP 系统提供的基本函数和函数式不够强大，那么它就可能无法表达所有可计算的函数。
  
 > An FP system cannot compute a program since function expressions are not objects. Nor can one define new functional forms within an FP system. (Both of these limitations are removed in formal functional programming (FFP) systems in which objects "represent" functions.) Thus no FP system can have a function, $\text{apply}$ , such that 
 
-FP 系统无法计算程序本身，因为函数表达式并不是对象。也不能在系统内定义新的函数形式。（形式函数编程 (FFP) 系统移除了这两个限制，其中对象可以 “表示” 函数。）为此，没有 FP 系统可以使得函数 $\text{apply}$ 满足
+FP 系统无法计算程序本身，因为函数表达式并不是对象。也不能在系统内定义新的函数式。（形式函数编程 (FFP) 系统移除了这两个限制，其中对象可以 “表示” 函数。）为此，没有 FP 系统可以使得函数 $\text{apply}$ 满足
 
 $$
 \text{apply} : < x, y > \equiv x : y
@@ -671,7 +670,7 @@ FP 系统最主要的局限还是做不到前序敏感。如果想要让 FP 系�
 
 > Suppose two FP systems, FP1 and FP2, both have the same set of objects and the same set of primitive functions, but the set of functional forms of FP1 properly includes that of FP2. Suppose also that both systems cart express all computable functions on objects. Nevertheless, we can say that FP1 is more expressive than FP2, since every function expression in FP2 can be duplicated in FP1, but by using a functional form not belonging to FP2, FP1 can express some functions more directly and easily than FP2. 
 
-假设 FP1 和 FP2 拥有相同的对象集合和基本函数集合，但是 FP1 的函数形式集合严格包含 FP2 的函数形式集合。同时假设这两个系统都能够表达所有可计算的函数。尽管如此，我们仍然可以说 FP1 的表达能力比 FP2 强。因为，FP2 中的所有函数表达式在 FP1 中都可以表示。与此同时，FP1 可以更直接、更容易地表示某些函数。
+假设 FP1 和 FP2 拥有相同的对象集合和基本函数集合，但是 FP1 的函数式集合严格包含 FP2 的函数式集合。同时假设这两个系统都能够表达所有可计算的函数。尽管如此，我们仍然可以说 FP1 的表达能力比 FP2 强。因为，FP2 中的所有函数表达式在 FP1 中都可以表示。与此同时，FP1 可以更直接、更容易地表示某些函数。
 
 > I believe the above observation could be developed into a theory of the expressive power of languages in which a language A would be more expressive than language B under the following roughly stated conditions. First, form all possible functions of all types in A by applying all existing functions to objects and to each other in all possible ways until no new function of any type can be formed. (The set of objects is a type; the set of continuous functions $[T \to U]$ from type $T$ to type $U$ is a type. If $f \in [T \to U]$ and $t \in T$ , then $ft$ in $U$ can be formed by applying $f$ to $t$ .) Do the same in language B. Next, compare each type in A to the corresponding type in B. If, for every type, A's type includes B's corresponding type, then A is more expressive than B (or equally expressive). If some type of A's functions is incomparable to B's, then A and B are not comparable in expressive power.
 
@@ -693,4 +692,6 @@ FP 系统比传统语言或基于 lambda 演算的语言更简单的主要原因
 
 > FP systems offer an escape from conventional word-at-a-time programming to a degree greater even than APL [^12] (the most successful attack on the problem to date within the von Neumann framework) because they provide a more powerful set of functional forms within a unified world of expressions. They offer the opportunity to develop higher level techniques for thinking about, manipulating, and writing programs. 
 
-FP 系统比 APL [^12]（冯诺依曼架构下迄今为止最成功的尝试之一）更能摆脱传统逐字编程模式，那是因为它在一个统一的表达式世界中提供了一组更强大的函数形式，并让程序员可以用更抽象的概念来思考、操作和编写程序。
+FP 系统比 APL [^12]（冯诺依曼架构下迄今为止最成功的尝试之一）更能摆脱传统逐字编程模式，那是因为它在一个统一的表达式世界中提供了一组更强大的函数式，并让程序员可以用更抽象的概念来思考、操作和编写程序。
+
+[^12]: [Iverson, K. A Programming Language. Wiley, New York, 1962.](https://dl.acm.org/doi/10.5555/1098666)

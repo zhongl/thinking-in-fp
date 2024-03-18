@@ -6,7 +6,7 @@
 
 既然我已经讨论了太多逐字处理的编程，现在我也应该谈论一下 APL [^12] 语言。我们非常感谢 Kenneth Iverson，因为他向我们展示了既不是逐字处理的，也不依赖于 lambda 表达式的程序，并且引入了新的函数式形式。由于 APL 的赋值语句可以存储数组，因此其函数式形式的效果超越了单个赋值的操作。
 
-[^12]: TODO
+[^12]: [Iverson, K. A Programming Language. Wiley, New York, 1962.](https://dl.acm.org/doi/10.5555/1098666)
 
 > Unfortunately, however, APL still splits programming into a world of expressions and a world of statements. Thus the effort to write one-line programs is partly motivated by the desire to stay in the more orderly world of expressions. APL has exactly three functional forms, called inner product, outer product, and reduction. These are sometimes difficult to use, there are not enough of them, and their use is confined to the world of expressions.
 
