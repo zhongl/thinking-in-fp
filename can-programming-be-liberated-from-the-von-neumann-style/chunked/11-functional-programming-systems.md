@@ -185,7 +185,7 @@ $$
 
 $$
 \text{atom} : x \equiv x\ \text{is an atom} \to T;
-                       x \not = \bot \to F;
+                       x \ne \bot \to F;
                        \bot
 $$
 
@@ -193,7 +193,7 @@ $$
 
 $$
 \text{eq} : x \equiv x = < y, z > \And\ y = z \to T;
-              x = < y, z > \And\ y \not = z \to F;
+              x = < y, z > \And\ y \ne z \to F;
               \bot
 $$
 
@@ -201,7 +201,7 @@ $$
 
 $$
 \text{null} : x \equiv x = \phi \to T;
-                       x \not = \bot \to F;
+                       x \ne \bot \to F;
                        \bot
 $$
 
@@ -381,9 +381,9 @@ $$
 \end{aligned}
 $$
 
-> If $f$ has a unique right unit $u_f \not = \bot$ , where $f : < x, u_f >\ \in \set{ x, \bot }$ for all objects $x$ , then the above definition is extended: $/f : \phi = u_f$ . Thus 
+> If $f$ has a unique right unit $u_f \ne \bot$ , where $f : < x, u_f >\ \in \set{ x, \bot }$ for all objects $x$ , then the above definition is extended: $/f : \phi = u_f$ . Thus 
 
-当函数 $f$ 存在唯一的右单元（right unit）满足 $u_f \not = \bot$ ， 且对所有对象 $x$ 满足 $f : < x, u_f >\ \in \set{ x, \bot }$ ，由此可得  $/f : \phi = u_f$ 。具体来说：
+当函数 $f$ 存在唯一的右单元（right unit）满足 $u_f \ne \bot$ ， 且对所有对象 $x$ 满足 $f : < x, u_f >\ \in \set{ x, \bot }$ ，由此可得  $/f : \phi = u_f$ 。具体来说：
 
 $$
 \begin{aligned}

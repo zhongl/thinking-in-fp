@@ -209,7 +209,7 @@ $$
 \begin{align*}
   1 \circ [f_1, \dots, f_n] &\le f_1 \\
   \text{s} \circ [f_1, \dots, f_s, \dots, f_n] &\le f_s \text{ for any  selector s, } s \le n \\
-\text{defined} \circ f_i (\text{for all } i \not = s, \textit{1} \le i \le n) \to\to \text{s} \circ [f_1, \dots, f_n] &\equiv f_s
+\text{defined} \circ f_i (\text{for all } i \ne s, \textit{1} \le i \le n) \to\to \text{s} \circ [f_1, \dots, f_n] &\equiv f_s
 \end{align*}
 $$
 
@@ -464,13 +464,13 @@ $$
 
 其中 $f \And g$ 是函数 $\text{and} \circ [f, g]$ ，且 $f^2 \equiv f \circ f$ 。
 
-> PROOF. We show that both sides produce the same result when applied to any $pair <x,y>$ , where $x \not = \phi$ , as per the stated qualification. 
+> PROOF. We show that both sides produce the same result when applied to any $pair <x,y>$ , where $x \ne \phi$ , as per the stated qualification. 
 
-**证明** 限定，对任意 $pair < x, y >$ ，且其中 $x \not = \phi$ 的应用，两边的结果是一致的。
+**证明** 限定，对任意 $pair < x, y >$ ，且其中 $x \ne \phi$ 的应用，两边的结果是一致的。
 
-> CASE 1. $x$ is an atom or $\bot$ . Then $\text{distr} : < x, y > = \bot$ , since $x \not = \phi$ . The left side also yields $\bot$ when applied to $< x, y >$ , since $\text{tl} \circ 1 : < x, y > = \bot$ and all functions are $\bot$ -preserving. 
+> CASE 1. $x$ is an atom or $\bot$ . Then $\text{distr} : < x, y > = \bot$ , since $x \ne \phi$ . The left side also yields $\bot$ when applied to $< x, y >$ , since $\text{tl} \circ 1 : < x, y > = \bot$ and all functions are $\bot$ -preserving. 
 
-**情况 1** 当 $x \not = \phi$， $x$ 是一个原子，或 $\bot$ 时，则 $\text{distr} : < x, y > = \bot$ 。又因为 $\text{tl} \circ 1 : < x, y > = \bot$ 且所有函数都是 $\bot$ 保留的，所以左边的函数应用 $< x, y >$ 只会的到 $\bot$ 。
+**情况 1** 当 $x \ne \phi$， $x$ 是一个原子，或 $\bot$ 时，则 $\text{distr} : < x, y > = \bot$ 。又因为 $\text{tl} \circ 1 : < x, y > = \bot$ 且所有函数都是 $\bot$ 保留的，所以左边的函数应用 $< x, y >$ 只会的到 $\bot$ 。
 
 > CASE 2. $x = < x_1, \dots, x_n >$. Then 
 
@@ -481,7 +481,7 @@ $$
   &\text{apndl} \circ [[1^2, 2], \text{distr} \circ [\text{tl} \circ 1, 2]] : < x, y >\\
   &\quad = \text{apndl} : << 1 : x, y >, \text{distr} : < \text{tl} : x, y >> \\
   &\quad = \text{apndl} : << x_1, y >, \phi> &&= << x_1, y >> &&\text{if tl} : x = \phi \\
-  &\quad = \text{apndl} : << x_1, y >, < x_2, y >, \dots, < x_n, y >> &&= << x_1, y>, \dots, < x_n, y >> &&\text{if tl} : x \not = \phi \\
+  &\quad = \text{apndl} : << x_1, y >, < x_2, y >, \dots, < x_n, y >> &&= << x_1, y>, \dots, < x_n, y >> &&\text{if tl} : x \ne \phi \\
   &\quad = \text{distr} : < x, y >
 \end{align*}
 $$
@@ -736,15 +736,15 @@ $$
 f \equiv p_0 \to q_0; \dots; p_n \to q_n; \dots \tag{E4}
 $$
 
-> meaning that, for any $x, f : x \not = \bot$ iff there is an $n \ge 0$ such that (a) $p_i:x = F$ for all $i < n$ , and (b) $p_n:x = T$ , and (c) $qn:x \not = \bot$ . When $f:x \not = \bot$, then $f:x = q_n:x$ for this $n$. (The foregoing is a consequence of the "expansion theorem".)
+> meaning that, for any $x, f : x \ne \bot$ iff there is an $n \ge 0$ such that (a) $p_i:x = F$ for all $i < n$ , and (b) $p_n:x = T$ , and (c) $qn:x \ne \bot$ . When $f:x \ne \bot$, then $f:x = q_n:x$ for this $n$. (The foregoing is a consequence of the "expansion theorem".)
 
-这意味着，对任意 $x, f : x \not = \bot$ 有且仅有一个大于等于零的 $n$ ，使得所有小于 $n$ 的 $i$  ，满足：
+这意味着，对任意 $x, f : x \ne \bot$ 有且仅有一个大于等于零的 $n$ ，使得所有小于 $n$ 的 $i$  ，满足：
 
 1. $p_i:x = F$ ；
 2. $p_n:x = T$ ；
-3. $q_n:x \not = \bot$ 。
+3. $q_n:x \ne \bot$ 。
 
-而 $f:x \not = \bot$ ，即 $f:x = q_n:x$ 。
+而 $f:x \ne \bot$ ，即 $f:x = q_n:x$ 。
 
 （以上就是“展开定理”的结论。）
 

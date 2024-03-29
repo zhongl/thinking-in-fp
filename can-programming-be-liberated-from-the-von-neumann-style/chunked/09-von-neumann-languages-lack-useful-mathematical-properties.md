@@ -35,9 +35,9 @@ $$
 ax + bx = a + b
 $$
 
-> for $x$ (given that $a+b \not = \textit{0}$ ), we mechanically apply the distributive, identity, and cancellation laws, in succession, to obtain
+> for $x$ (given that $a+b \ne \textit{0}$ ), we mechanically apply the distributive, identity, and cancellation laws, in succession, to obtain
 
-对于 $x$ （假设 $a+b \not = \textit{0}$ ），我们依次使用分配律、幺元律和消去律，机械地将其变形得到
+对于 $x$ （假设 $a+b \ne \textit{0}$ ），我们依次使用分配律、幺元律和消去律，机械地将其变形得到
 
 $$
 \begin{aligned}
