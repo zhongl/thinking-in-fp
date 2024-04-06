@@ -94,3 +94,4 @@ origin: https://dl.acm.org/doi/epdf/10.1145/359576.359579
 12. [FP系统里的程序代数](./12-the-algebra-of-programs-for-fp-systems.md)
 13. [函数式编程的形式化系统](./13-formal-systems-for-functional-programming.md)
 14. [应用型状态转换系统](./14-applicative-state-transition-systems.md)
+15. [计算机设计的小结](./15-remarks-about-computer-design.md)
