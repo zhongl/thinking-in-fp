@@ -1016,7 +1016,7 @@ $$
 
 > since $h \circ 2 \circ [\text{id}, f \circ k] \equiv h \circ f \circ k$ by **I.5** ( $\text{id}$ is defined except for $\bot$ , and the equation holds for $\bot$ ). Thus the recursion theorem gives
 
-因为根据定理**I.5**，有 $h \circ 2 \circ [\text{id}, f \circ k] \equiv h \circ f \circ k$（注意，$\text{id}$ 除了 $\bot$ 未定义以外，该等式恒成立）。所以，根据递归定理可得
+因为根据定理**I.5**，有 $h \circ 2 \circ [\text{id}, f \circ k] \equiv h \circ f \circ k$（注意， $\text{id}$ 除了 $\bot$ 未定义以外，该等式恒成立）。所以，根据递归定理可得
 
 $$
 f \equiv p \to g; \dots; p \circ k^n \to \text{Q}^n(g); \dots
@@ -1216,7 +1216,7 @@ q'_n \equiv  2 \circ [k \circ 1, h \circ 2]^n
      \quad \quad \quad \quad\text{by I.5.1} \tag{8}
 $$
 
-（提示一下，$[k \circ 1, 2]^n \equiv [k \circ 1, \text{id} \circ 2]^n$）
+（提示一下， $[k \circ 1, 2]^n \equiv [k \circ 1, \text{id} \circ 2]^n$ ）
 
 > Now, from the above, using **I.5**,
 
@@ -1444,7 +1444,7 @@ $$
 
 > PROOF. Since $\rm E$ is the composition of continuous functionals (from $\bf F$) involving only monotonic functions ($\bot$ -preserving functions from $\rm F$) as constant terms, $\rm E$ is continuous ([^16] p. 493). Therefore its least fixed point $f$ is $\lim_i\{\text{E}^i(\bar{\bot})\} \equiv \lim_i\{f_i\}$ ([^16] p. 494), which by definition is the above infinite expansion for $f$ . 
 
-**证明** 因为 $\rm E$ 是（来自函数式 $\bf F$ ）连续函数式的复合，并且只包含单调函数（来自$\rm F$ 的 $\bot$ 保留的函数）作为常量项，所以 $\rm E$ 也是连续的（资料[^16]第493页）。进而，最小不动点 $f$ 满足 $\lim_i\{\text{E}^i(\bar{\bot})\} \equiv \lim_i\{f_i\}$ ，这也是被上面  $f$ 的无限展开式所定义的。
+**证明** 因为 $\rm E$ 是（来自函数式 $\bf F$ ）连续函数式的复合，并且只包含单调函数（来自 $\rm F$ 的 $\bot$ 保留的函数）作为常量项，所以 $\rm E$ 也是连续的（资料[^16]第493页）。进而，最小不动点 $f$ 满足 $\lim_i\{\text{E}^i(\bar{\bot})\} \equiv \lim_i\{f_i\}$ ，这也是被上面  $f$ 的无限展开式所定义的。
 
 > DEFINITION. Let $text{E}(f)$ be a function expression satisfying the following:
 
@@ -1459,7 +1459,7 @@ $$
 其中存在 $p_i \in \rm F$ 和 $q_i \in \rm F$ 满足
 
 $$
-\text{E}_1(p_i \to q_i; h) \equiv p_{i+1} \to q_{i+1}; \text{E}_1(h) \quad \text{for all } h \in \text{F} \text{ and } i = 0, 1, \dots \tag{LE2}
+\text{E} _ 1(p_i \to q_i; h) \equiv p _ {i+1} \to q _ {i+1}; \text{E} _ 1(h) \quad \text{for all } h \in \text{F} \text{ and } i = 0, 1, \dots \tag{LE2}
 $$
 
 > and
