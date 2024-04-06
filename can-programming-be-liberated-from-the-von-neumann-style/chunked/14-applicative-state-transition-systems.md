@@ -340,12 +340,14 @@ $$
 
 在 AST 系统中，命名由函数完成，正如 13.3.3 节所述。还可以定义许多用于更改和访问存储的有用函数（例如压栈、出栈、清除、带类型提取等）。所有这些定义及其相关的命名系统都可以引入，而无需更改 AST 框架。程序中可以使用不同类型的“存储”（例如具有“类型单元格”的存储器），且每个存储都有独立的命名系统。一个存储中的单元格也可能包含另一个整个存储。
 
-> The important point about AST naming systems is that they utilize the functional nature of names (Reynolds' GEDANKEN [19] also does so to some extent within a von Neumann framework). Thus name functions can be composed and combined with other functions by functional forms. In contrast, functions and names in von Neumann languages are usually disjoint concepts and the function-like nature of names is almost totally concealed and useless, because 
+> The important point about AST naming systems is that they utilize the functional nature of names (Reynolds' GEDANKEN [^19] also does so to some extent within a von Neumann framework). Thus name functions can be composed and combined with other functions by functional forms. In contrast, functions and names in von Neumann languages are usually disjoint concepts and the function-like nature of names is almost totally concealed and useless, because 
 > 1) names cannot be applied as functions;
 > 2) there are no general means to combine names with other names and functions; 
 > 3) the objects to which name functions apply (stores) are not accessible as objects. 
 
-AST 命名系统的重要之处在于利用了名称的函数性质（雷诺兹的 GEDANKEN [19] 也在一定程度上在冯·诺伊曼框架内这样做）。因此，名称函数可以通过函数式与其他函数进行组合和结合。相比之下，冯·诺伊曼语言中的函数和名称通常是分离的概念，名称的类函数本质几乎被完全隐藏且无用，因为
+[^19]: [Reynolds, J.C. GEDANKEN--a simple typeless language based on the principle of completeness and the reference concept. Comm. ACM 13, 5 (May 1970), 308-318.](https://dl.acm.org/doi/10.1145/362349.362364)
+
+AST 命名系统的重要之处在于利用了名称的函数性质（雷诺兹的 GEDANKEN [^19] 也在一定程度上在冯·诺伊曼框架内这样做）。因此，名称函数可以通过函数式与其他函数进行组合和结合。相比之下，冯·诺伊曼语言中的函数和名称通常是分离的概念，名称的类函数本质几乎被完全隐藏且无用，因为
 
 1. 名称不能作为函数应用；
 2. 没有通用方法将名称与其他名称和函数结合；

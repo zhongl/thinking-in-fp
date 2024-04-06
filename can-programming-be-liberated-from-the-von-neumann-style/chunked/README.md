@@ -96,3 +96,13 @@ origin: https://dl.acm.org/doi/epdf/10.1145/359576.359579
 14. [应用型状态转换系统](./14-applicative-state-transition-systems.md)
 15. [计算机设计的小结](./15-remarks-about-computer-design.md)
 16. [总结](./16-summary.md)
+
+> *Acknowledgments*. In earlier work relating to this paper I have received much valuable help and many suggestions from Paul R. McJones and Barry K. Rosen. I have had a great deal of valuable help and feedback in preparing this paper. James N. Gray was exceedingly generous with his time and knowledge in reviewing the first draft. Stephen N. Zilles also gave it a careful reading. Both made many valuable suggestions and criticisms at this difficult stage. It is a pleasure to acknowledge my debt to them. I also had helpful discussions about the first draft with Ronald Fagin, Paul R. McJones, and James H. Morris, Jr. Fagin suggested a number of improvements in the proofs of theorems. 
+
+**致谢**
+
+在撰写这篇论文之前的工作中，我便得到了 Paul R. McJones 和 Barry K. Rosen 的许多宝贵帮助和建议。在准备这篇论文的过程中，我同样得到了很多宝贵的帮助和反馈。James N. Gray 在审阅第一稿时慷慨地提供了他的时间和知识；Stephen N. Zilles 也仔细阅读了它。他们俩在这个艰难的阶段都提出了许多宝贵的建议和批评，我很荣幸能够感谢他们。我还与 Ronald Fagin、Paul R. McJones 和 James H. Morris Jr. 就初稿进行了收益良多的讨论，其中 Fagin 提出了几个改进定理证明的方法。
+
+> Since a large portion of the paper contains technical material, I asked two distinguished computer scientists to referee the third draft. David J. Giles and John C. Reynolds were kind enough to accept this burdensome task. Both gave me large, detailed sets of corrections and overall comments that resulted in many improvements, large and small, in this final version (which they have not had an opportunity to review). I am truly grateful for the generous time and care they devoted to reviewing this paper. Finally, I also sent copies of the third draft to Gyula A. Mag6, Peter Naur, and John H. Williams. They were kind enough to respond with a number of extremely helpful comments and corrections. Geoffrey A. Frank and Dave Tolle at the University of North Carolina reviewed Mag6's copy and pointed out an important error in the definition of the semantic function of FFP systems. My grateful thanks go to all these kind people for their help.
+
+由于论文的大部分内容都是技术性的，因此我请了两位杰出的计算机科学家来评审第三稿。David J. Giles 和 John C. Reynolds 都很乐意接受这项繁重的任务，并给了我大量详细的纠正和总体评论，从而使这个最终版本（他们没有机会审阅）得到了不少或大或小的改进。我真心地感谢他们为审阅这篇论文所付出的慷慨时间和精力。最后，我还将第三稿副本发送给了 Gyula A. Magó、Peter Naur 和 John H. Williams，他们都非常友善地回复了一些非常有帮助的评论和纠正。北卡罗来纳大学的 Geoffrey A. Frank 和 Dave Tolle 审查了 Magó 的副本，并指出了 FFP 系统语义函数定义中的一个重要错误。我对所有这些好心人提供的帮助表示衷心的感谢。
