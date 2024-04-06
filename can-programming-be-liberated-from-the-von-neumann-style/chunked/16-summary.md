@@ -54,7 +54,7 @@
 
 > **Section 7**. The changeable parts of von Neumann languages have little expressive power; this is why most of the language must be built into the framework. The lack of expressive power results from the inability of von Neumann languages to effectively use combining forms for building programs, which in turn results from the split between expressions and statements. Combining forms are at their best in expressions, but in von Neumann languages an expression can only produce a single word; hence expressive power in the world of expressions is mostly lost. A further obstacle to the use of combining forms is the elaborate use of naming conventions. 
 
-#### 第 7 节
+### 第 7 节
 
 冯·诺依曼语言的可变部分表达能力较弱，这就是为什么大多数语言特性必须内置于框架中的原因。表达能力的缺乏源于冯·诺依曼语言无法有效地使用组合形式来构建程序，这又是由表达式和语句的分割所导致。组合形式能在表达式中发挥最佳的作用，但在冯·诺依曼语言中，表达式只能产生单字。因此，表达式世界中的表达能力大部分都消失了，而滥用命名约定又进一步阻碍了组合形式的使用。
 
@@ -85,7 +85,7 @@ APL 是第一种非基于 lambda 演算、非逐字处理并且使用函数式�
 
 > **Section 11**. A class of informal functional programming (FP) systems is described which use no variables. Each system is built from objects, functions, functional forms, and definitions. Functions map objects into objects. Functional forms combine existing functions to form new ones. This section lists examples of primitive functions and functional forms and gives sample programs. It discusses the limitations and advantages of FP systems. 
 
-#### 第 11 节
+### 第 11 节
 
 描述了一类非正式的函数式编程 (FP) 系统，它们不使用变量。每个系统都由对象、函数、函数式和定义构建。函数将对象映射到对象。函数式组合现有函数以形成新的函数。本节列举了原始函数和函数式的例子，并给出了示例程序，用以讨论了 FP 系统的局限性和优势。
 
