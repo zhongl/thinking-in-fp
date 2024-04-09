@@ -39,7 +39,7 @@ authors:
 
 > Part I of this paper describes genesis and principles: how Haskell came to be. We describe the developments leading up to Haskell and its early history (Section 2) and the processes and principles that guided its evolution (Section 3).
 
-本文的 **第一部分** 描述了语言的起源和原则，即 Haskell 的何去何从。其中包括了导致 Haskell 出现的事件以及早期历史（第二节），和指导 Haskell 演化的过程与原则（第三节）。
+本文的 **第一部分** 描述了语言的起源和原则，即 Haskell 的何去何从。其中包括了导致 Haskell 出现的事件以及早期历史（[第二节](./02-the-genesis-of-haskell.md)），和指导 Haskell 演化的过程与原则（第三节）。
 
 > Part II describes Haskell’s technical contributions: what Haskell is. We pay particular attention to aspects of the language and its evolution that are distinctive in themselves, or that developed in unexpected or surprising ways. We reflect on five areas: syntax (Section 4); algebraic data types (Section 5); the type system, and type classes in particular (Section 6); monads and input/output (Section 7); and support for programming in the large, such as modules and packages, and the foreign-function interface (Section 8).
 
