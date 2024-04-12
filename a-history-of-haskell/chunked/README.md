@@ -43,7 +43,7 @@ authors:
 
 > Part II describes Haskell’s technical contributions: what Haskell is. We pay particular attention to aspects of the language and its evolution that are distinctive in themselves, or that developed in unexpected or surprising ways. We reflect on five areas: syntax (Section 4); algebraic data types (Section 5); the type system, and type classes in particular (Section 6); monads and input/output (Section 7); and support for programming in the large, such as modules and packages, and the foreign-function interface (Section 8).
 
-**第二部分** 描述了 Haskell 的技术贡献，即 Haskell 是什么。这里会重点突出语言及其演变中的一些独特之处，亦或是在意料之外喜中发展出来的点。它们可以分五个方面：语法（第四节）；代数数据类型（第五节）；类型系统，尤其是类型族（type classes）（第六节）；Monad 及输入输出（第七节）；大型系统的相关支持，如模块、包和外函数（foreign-function）接口（第八节）。
+**第二部分** 描述了 Haskell 的技术贡献，即 Haskell 是什么。这里会重点突出语言及其演变中的一些独特之处，或是在意料之外中发展出来的点。它们可以分五个方面：语法（第四节）；代数数据类型（第五节）；类型系统，尤其是类型族（type classes）（第六节）；Monad 及输入输出（第七节）；大型系统的相关支持，如模块、包和外函数（foreign-function）接口（第八节）。
 
 > Part III describes implementations and tools: what has been built for the users of Haskell. We describe the various implementations of Haskell, including GHC, hbc, hugs, nhc, and Yale Haskell (Section 9), and tools for profiling and debugging (Section 10).
 
